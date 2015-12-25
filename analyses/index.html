@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Marxistats</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="/jquery-2.1.4.min.js"></script>
+<script src="/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="/jquery.dataTables.min.css">
+
+</head>
+<body>
+  <table id="analyses" class="display" cellspacing="0" width="100%">
+    <thead>
+     <tr>
+       <th>Title</th>
+       <th>Author</th>
+       <th>Date</th>
+     </tr>
+    </thead>
+    <tfoot>
+     <tr>
+       <th>Title</th>
+       <th>Author</th>
+       <th>Date</th>
+     </tr>
+    </tfoot>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script>
+
+  $(document).ready(function() {
+    $.getJSON('index.json', function(data) {
+      data.forEach(function(each){
+        var string = '<tr><td>'+ each.title  +'</td><td>'+ each.folder  +'</td><td>'+ each.time  +'</td></tr>'
+        $("table#analyses tbody").append(string);
+      }); 
+      $('#analyses').DataTable();
+    });
+  });
+  
+  </script>
+
+</body>
+</html>

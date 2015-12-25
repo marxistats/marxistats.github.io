@@ -1,26 +1,27 @@
 var fs= require('fs');
 var execSync = require('child_process').execSync;
-var cpath = ".";
 
 function recursive(cpath) {
   var files = fs.readdirSync(cpath + "/");
   files.forEach(function(file, index, files) {
     var stat = fs.statSync(cpath + "/" + file);
-    if (stat.isDirectory()) {
-    
-      recursive(cpath + "/" +file);
-    
+    if (stat.isDirectory()){
+      if(file.charAt(0)!="." && file != "MathJax-master" && file != "highlight") {
+        recursive(cpath + "/" +file);
+      }
     } else {
     
       if(file.slice(-4) == "html") {
-        execSync("litprog -html "+ file + " javascript > code.js");    
-        execSync("litprog -html "+ file + " data > data.csv");    
+        execSync("litprog -html "+ cpath + "/" + file + " javascript > " + cpath + "/" +"code.js");
+        if(cpath.indexOf("./data")==0){ 
+          execSync("litprog -html "+ cpath + "/" + file + " data > " + cpath + "/" + "data.csv");    
+        }
       }
     
     }
   });
 }
-recursive(cpath);
+recursive(".");
 
 ['analyses','data'].forEach(function(mfolder){
   var results = [];
@@ -32,11 +33,14 @@ recursive(cpath);
       ifiles.forEach(function(ifile) {
         var stat = fs.statSync("./" + mfolder + "/" + file + "/" + ifile);
         if (stat.isDirectory()) {
-          result.push({'title':ifile.slice(-5),'folder':file,'time':stat.mtime.getTime()});
+          var time = stat.mtime;
+          time = time.getFullYear() + '/' + time.getMonth() + '/' + time.getDate();
+          var link = "<a href='" + file + "/" + ifile + "/" + ifile + ".html'>" + ifile.replace("_"," ") + "</a>";
+          results.push({'title':link,'folder':file.replace("_"," "),'time': time});
         }
       });
     }
   });
-  console.log(results);
+  fs.writeFileSync("./" +mfolder+"/index.json",JSON.stringify(results));
 });
 

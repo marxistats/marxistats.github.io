@@ -10,7 +10,8 @@ $(document).ready(function() {
             $(this).append(html);
 
         })
-    $("code").before('<p class="code_toggle">Code:</p>');
+    $("code.data").before('<p class="code_toggle">Data:</p>');
+    $("code.javascript").before('<p class="code_toggle">Code:</p>');
     $(".code_toggle").click(function(){$(this).next().toggle()});
     setTimeout(function(){$(".code_toggle").next().toggle();},1);
 
