@@ -35,7 +35,7 @@ recursive(".");
         if (stat.isDirectory()) {
           var time = stat.mtime;
           time = time.getFullYear() + '/' + time.getMonth() + '/' + time.getDate();
-          var link = "<a href='" + file + "/" + ifile + "/" + ifile + ".html'>" + ifile.replace("_"," ") + "</a>";
+          var link = "<a href='" + file + "/" + ifile + "/" + ifile + ".html'>" + ifile + "</a>";
           results.push({'title':link,'folder':file.replace("_"," "),'time': time});
         }
       });
