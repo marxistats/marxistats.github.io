@@ -1,7 +1,17 @@
-function multi_chart(data_locations,computation,root_location,y_name) {
- 
-  var data; 
-  function draw() {
+function Multi_chart(data_locations,computation,root_location,y_name) {
+  this.draw = draw; 
+  this.data;
+  var self = this;
+  this.min_year;
+  this.max_year;
+
+  function draw(min_year, max_year) {
+    var ndata = self.data.slice();
+    if(!isNaN(min_year) && !isNaN(max_year)) {
+      self.min_year = min_year;
+      self.max_year = max_year;
+    }
+
     $(root_location).empty();
     var markdown_left = Math.floor($('.markdown').css('margin-left').slice(0,-2));
     var markdown_right = Math.floor($('.markdown').css('margin-right').slice(0,-2));
@@ -10,7 +20,7 @@ function multi_chart(data_locations,computation,root_location,y_name) {
        height = window.innerWidth*5/14 - margin.top - margin.bottom;
     
     
-    var x = d3.time.scale()
+    var x = d3.scale.linear()
        .range([0, width]);
     
     var y = d3.scale.linear()
@@ -35,19 +45,22 @@ function multi_chart(data_locations,computation,root_location,y_name) {
      .append("g")
        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "year"; }));
-  
+   ndata = ndata.filter(function(each){ 
+     var result = (each.year > self.min_year) && (each.year < self.max_year) 
+     return result;
+   });
+   color.domain(d3.keys(ndata[0]).filter(function(key) { return key !== "year"; }));
   
    var stats = color.domain().map(function(name) {
      return {
        name: name,
-       values: data.map(function(d) {
+       values: ndata.map(function(d) {
          return {year: d.year, y_value: +d[name]};
        })
      };
    });
   
-   x.domain(d3.extent(data, function(d) { return d.year; }));
+   x.domain(d3.extent(ndata, function(d) { return d.year; }));
   
    y.domain([
      d3.min(stats, function(c) { return d3.min(c.values, function(v) { return v.y_value; }); }),
@@ -87,27 +100,33 @@ function multi_chart(data_locations,computation,root_location,y_name) {
        .text(function(d) { return d.name; });
   }
   
-  var parseDate = d3.time.format("%Y").parse;
   var d_i = 0;
   var tdata = [];
   function recursive(){
     d3.csv(data_locations[d_i][0], function(error, ldata) {
       if (error) throw error;
         ldata.forEach(function(each){
-          each.year = parseDate(each.year);
           insert(each,tdata,data_locations[d_i][1]);
         });
         d_i++;
       if(d_i < data_locations.length){
         recursive();
       } else {
-        data = [];
+        self.data = [];
         tdata.forEach(function(each){
-          data.push(computation(each));
+          each.year = parseInt(each.year);
+          self.data.push(computation(each));
         });  
+        self.min_year = self.data[0].year;
+        self.max_year = self.data[self.data.length-1].year;
         $(document).ready(function() {
-          draw();
-          window.onresize = draw;
+          self.draw();
+          if(window.onresize == null) {
+            window.onresize = function() {self.draw()};
+          } else {
+            var prev_draws = window.onresize;
+            window.onresize = function() {prev_draws(); self.draw(); };
+          };
         });
       }
     });

@@ -1,0 +1,13 @@
+var Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments_chart = new Multi_chart([["data.csv",["Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments"]]],function(data){return data;},"#Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments","billions");
+var Domestic_industries_chart = new Multi_chart([["data.csv",["Domestic_industries"]]],function(data){return data;},"#Domestic_industries","billions");
+var Financial_chart = new Multi_chart([["data.csv",["Financial"]]],function(data){return data;},"#Financial","billions");
+var Nonfinancial_chart = new Multi_chart([["data.csv",["Nonfinancial"]]],function(data){return data;},"#Nonfinancial","billions");
+var Rest_of_the_world_chart = new Multi_chart([["data.csv",["Rest_of_the_world"]]],function(data){return data;},"#Rest_of_the_world","billions");
+var Corporate_profits_with_inventory_valuation_adjustment_chart = new Multi_chart([["data.csv",["Corporate_profits_with_inventory_valuation_adjustment"]]],function(data){return data;},"#Corporate_profits_with_inventory_valuation_adjustment","billions");
+var Federal_Reserve_banks_chart = new Multi_chart([["data.csv",["Federal_Reserve_banks"]]],function(data){return data;},"#Federal_Reserve_banks","billions");
+var Other_chart = new Multi_chart([["data.csv",["Other"]]],function(data){return data;},"#Other","billions");
+var Manufacturing_chart = new Multi_chart([["data.csv",["Manufacturing"]]],function(data){return data;},"#Manufacturing","billions");
+var Durable_goods_chart = new Multi_chart([["data.csv",["Durable_goods"]]],function(data){return data;},"#Durable_goods","billions");
+var Nondurable_goods_chart = new Multi_chart([["data.csv",["Nondurable_goods"]]],function(data){return data;},"#Nondurable_goods","billions");
+var Transportation_and_public_utilities_chart = new Multi_chart([["data.csv",["Transportation_and_public_utilities"]]],function(data){return data;},"#Transportation_and_public_utilities","billions");
+var Wholesale_trade_and_retail_trade_and_automobile_services_chart = new Multi_chart([["data.csv",["Wholesale_trade_and_retail_trade_and_automobile_services"]]],function(data){return data;},"#Wholesale_trade_and_retail_trade_and_automobile_services","billions");

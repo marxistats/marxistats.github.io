@@ -18,15 +18,734 @@
 </head>
 <body>
     <div style = "font-size:120">
-
-       <div class="multi_chart" id="chart"></div>
        <div class="markdown"> 
+# [Gross_value_added_of_corporate_business_1](#Gross_value_added_of_corporate_business_1)
+       </div>
+       <div class="multi_chart" id="Gross_value_added_of_corporate_business_1"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Gross_value_added_of_corporate_business_1_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Gross_value_added_of_corporate_business_1_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
 
+<script>
+$("#Gross_value_added_of_corporate_business_1_min").change(function(){
+  var min = $("#Gross_value_added_of_corporate_business_1_min").val();
+  var max = $("#Gross_value_added_of_corporate_business_1_max").val();
+  Gross_value_added_of_corporate_business_1_chart.draw(min,max);
+});
+$("#Gross_value_added_of_corporate_business_1_max").change(function(){
+  var min = $("#Gross_value_added_of_corporate_business_1_min").val();
+  var max = $("#Gross_value_added_of_corporate_business_1_max").val();
+  Gross_value_added_of_corporate_business_1_chart.draw(min,max);
+  Gross_value_added_of_corporate_business_1_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
 ```javascript
-  multi_chart([["data.csv",["Gross_value_added_of_corporate_business_1","Consumption_of_fixed_capital","Net_value_added","Compensation_of_employees","Wages_and_salaries","Supplements_to_wages_and_salaries","Taxes_on_production_and_imports_less_subsidies","Net_operating_surplus","Net_interest_and_miscellaneous_payments","Business_current_transfer_payments_(net)","Corporate_profits_with_IVA_and_CCAdj","Taxes_on_corporate_income","Profits_after_tax_with_IVA_and_CCAdj","Net_dividends","Undistributed_profits_with_IVA_and_CCAdj","Gross_value_added_of_financial_corporate_business_1","Gross_value_added_of_nonfinancial_corporate_business_1","Profits_before_tax_(without_IVA_and_CCAdj)","Profits_after_tax_(without_IVA_and_CCAdj)","Undistributed_profits_after_tax_(without_IVA_and_CCAdj)","Inventory_valuation_adjustment","Capital_consumption_adjustment","Gross_value_added_of_nonfinancial_corporate_business_2","Consumption_of_fixed_capital_3","Net_value_added_4"]]],function(data){return data;},"#chart","billions");
+var Gross_value_added_of_corporate_business_1_chart = new Multi_chart([["data.csv",["Gross_value_added_of_corporate_business_1"]]],function(data){return data;},"#Gross_value_added_of_corporate_business_1","billions");
 ```
+       </div>
+       <div class="markdown"> 
+# [Consumption_of_fixed_capital](#Consumption_of_fixed_capital)
+       </div>
+       <div class="multi_chart" id="Consumption_of_fixed_capital"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Consumption_of_fixed_capital_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Consumption_of_fixed_capital_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Consumption_of_fixed_capital_min").change(function(){
+  var min = $("#Consumption_of_fixed_capital_min").val();
+  var max = $("#Consumption_of_fixed_capital_max").val();
+  Consumption_of_fixed_capital_chart.draw(min,max);
+});
+$("#Consumption_of_fixed_capital_max").change(function(){
+  var min = $("#Consumption_of_fixed_capital_min").val();
+  var max = $("#Consumption_of_fixed_capital_max").val();
+  Consumption_of_fixed_capital_chart.draw(min,max);
+  Consumption_of_fixed_capital_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Consumption_of_fixed_capital_chart = new Multi_chart([["data.csv",["Consumption_of_fixed_capital"]]],function(data){return data;},"#Consumption_of_fixed_capital","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Net_value_added](#Net_value_added)
+       </div>
+       <div class="multi_chart" id="Net_value_added"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Net_value_added_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Net_value_added_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Net_value_added_min").change(function(){
+  var min = $("#Net_value_added_min").val();
+  var max = $("#Net_value_added_max").val();
+  Net_value_added_chart.draw(min,max);
+});
+$("#Net_value_added_max").change(function(){
+  var min = $("#Net_value_added_min").val();
+  var max = $("#Net_value_added_max").val();
+  Net_value_added_chart.draw(min,max);
+  Net_value_added_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Net_value_added_chart = new Multi_chart([["data.csv",["Net_value_added"]]],function(data){return data;},"#Net_value_added","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Compensation_of_employees](#Compensation_of_employees)
+       </div>
+       <div class="multi_chart" id="Compensation_of_employees"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Compensation_of_employees_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Compensation_of_employees_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Compensation_of_employees_min").change(function(){
+  var min = $("#Compensation_of_employees_min").val();
+  var max = $("#Compensation_of_employees_max").val();
+  Compensation_of_employees_chart.draw(min,max);
+});
+$("#Compensation_of_employees_max").change(function(){
+  var min = $("#Compensation_of_employees_min").val();
+  var max = $("#Compensation_of_employees_max").val();
+  Compensation_of_employees_chart.draw(min,max);
+  Compensation_of_employees_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Compensation_of_employees_chart = new Multi_chart([["data.csv",["Compensation_of_employees"]]],function(data){return data;},"#Compensation_of_employees","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Wages_and_salaries](#Wages_and_salaries)
+       </div>
+       <div class="multi_chart" id="Wages_and_salaries"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Wages_and_salaries_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Wages_and_salaries_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Wages_and_salaries_min").change(function(){
+  var min = $("#Wages_and_salaries_min").val();
+  var max = $("#Wages_and_salaries_max").val();
+  Wages_and_salaries_chart.draw(min,max);
+});
+$("#Wages_and_salaries_max").change(function(){
+  var min = $("#Wages_and_salaries_min").val();
+  var max = $("#Wages_and_salaries_max").val();
+  Wages_and_salaries_chart.draw(min,max);
+  Wages_and_salaries_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Wages_and_salaries_chart = new Multi_chart([["data.csv",["Wages_and_salaries"]]],function(data){return data;},"#Wages_and_salaries","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Supplements_to_wages_and_salaries](#Supplements_to_wages_and_salaries)
+       </div>
+       <div class="multi_chart" id="Supplements_to_wages_and_salaries"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Supplements_to_wages_and_salaries_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Supplements_to_wages_and_salaries_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Supplements_to_wages_and_salaries_min").change(function(){
+  var min = $("#Supplements_to_wages_and_salaries_min").val();
+  var max = $("#Supplements_to_wages_and_salaries_max").val();
+  Supplements_to_wages_and_salaries_chart.draw(min,max);
+});
+$("#Supplements_to_wages_and_salaries_max").change(function(){
+  var min = $("#Supplements_to_wages_and_salaries_min").val();
+  var max = $("#Supplements_to_wages_and_salaries_max").val();
+  Supplements_to_wages_and_salaries_chart.draw(min,max);
+  Supplements_to_wages_and_salaries_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Supplements_to_wages_and_salaries_chart = new Multi_chart([["data.csv",["Supplements_to_wages_and_salaries"]]],function(data){return data;},"#Supplements_to_wages_and_salaries","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Taxes_on_production_and_imports_less_subsidies](#Taxes_on_production_and_imports_less_subsidies)
+       </div>
+       <div class="multi_chart" id="Taxes_on_production_and_imports_less_subsidies"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Taxes_on_production_and_imports_less_subsidies_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Taxes_on_production_and_imports_less_subsidies_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Taxes_on_production_and_imports_less_subsidies_min").change(function(){
+  var min = $("#Taxes_on_production_and_imports_less_subsidies_min").val();
+  var max = $("#Taxes_on_production_and_imports_less_subsidies_max").val();
+  Taxes_on_production_and_imports_less_subsidies_chart.draw(min,max);
+});
+$("#Taxes_on_production_and_imports_less_subsidies_max").change(function(){
+  var min = $("#Taxes_on_production_and_imports_less_subsidies_min").val();
+  var max = $("#Taxes_on_production_and_imports_less_subsidies_max").val();
+  Taxes_on_production_and_imports_less_subsidies_chart.draw(min,max);
+  Taxes_on_production_and_imports_less_subsidies_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Taxes_on_production_and_imports_less_subsidies_chart = new Multi_chart([["data.csv",["Taxes_on_production_and_imports_less_subsidies"]]],function(data){return data;},"#Taxes_on_production_and_imports_less_subsidies","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Net_operating_surplus](#Net_operating_surplus)
+       </div>
+       <div class="multi_chart" id="Net_operating_surplus"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Net_operating_surplus_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Net_operating_surplus_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Net_operating_surplus_min").change(function(){
+  var min = $("#Net_operating_surplus_min").val();
+  var max = $("#Net_operating_surplus_max").val();
+  Net_operating_surplus_chart.draw(min,max);
+});
+$("#Net_operating_surplus_max").change(function(){
+  var min = $("#Net_operating_surplus_min").val();
+  var max = $("#Net_operating_surplus_max").val();
+  Net_operating_surplus_chart.draw(min,max);
+  Net_operating_surplus_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Net_operating_surplus_chart = new Multi_chart([["data.csv",["Net_operating_surplus"]]],function(data){return data;},"#Net_operating_surplus","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Net_interest_and_miscellaneous_payments](#Net_interest_and_miscellaneous_payments)
+       </div>
+       <div class="multi_chart" id="Net_interest_and_miscellaneous_payments"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Net_interest_and_miscellaneous_payments_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Net_interest_and_miscellaneous_payments_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Net_interest_and_miscellaneous_payments_min").change(function(){
+  var min = $("#Net_interest_and_miscellaneous_payments_min").val();
+  var max = $("#Net_interest_and_miscellaneous_payments_max").val();
+  Net_interest_and_miscellaneous_payments_chart.draw(min,max);
+});
+$("#Net_interest_and_miscellaneous_payments_max").change(function(){
+  var min = $("#Net_interest_and_miscellaneous_payments_min").val();
+  var max = $("#Net_interest_and_miscellaneous_payments_max").val();
+  Net_interest_and_miscellaneous_payments_chart.draw(min,max);
+  Net_interest_and_miscellaneous_payments_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Net_interest_and_miscellaneous_payments_chart = new Multi_chart([["data.csv",["Net_interest_and_miscellaneous_payments"]]],function(data){return data;},"#Net_interest_and_miscellaneous_payments","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Business_current_transfer_payments_net](#Business_current_transfer_payments_net)
+       </div>
+       <div class="multi_chart" id="Business_current_transfer_payments_net"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Business_current_transfer_payments_net_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Business_current_transfer_payments_net_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Business_current_transfer_payments_net_min").change(function(){
+  var min = $("#Business_current_transfer_payments_net_min").val();
+  var max = $("#Business_current_transfer_payments_net_max").val();
+  Business_current_transfer_payments_net_chart.draw(min,max);
+});
+$("#Business_current_transfer_payments_net_max").change(function(){
+  var min = $("#Business_current_transfer_payments_net_min").val();
+  var max = $("#Business_current_transfer_payments_net_max").val();
+  Business_current_transfer_payments_net_chart.draw(min,max);
+  Business_current_transfer_payments_net_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Business_current_transfer_payments_net_chart = new Multi_chart([["data.csv",["Business_current_transfer_payments_net"]]],function(data){return data;},"#Business_current_transfer_payments_net","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Corporate_profits_with_IVA_and_CCAdj](#Corporate_profits_with_IVA_and_CCAdj)
+       </div>
+       <div class="multi_chart" id="Corporate_profits_with_IVA_and_CCAdj"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Corporate_profits_with_IVA_and_CCAdj_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Corporate_profits_with_IVA_and_CCAdj_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Corporate_profits_with_IVA_and_CCAdj_min").change(function(){
+  var min = $("#Corporate_profits_with_IVA_and_CCAdj_min").val();
+  var max = $("#Corporate_profits_with_IVA_and_CCAdj_max").val();
+  Corporate_profits_with_IVA_and_CCAdj_chart.draw(min,max);
+});
+$("#Corporate_profits_with_IVA_and_CCAdj_max").change(function(){
+  var min = $("#Corporate_profits_with_IVA_and_CCAdj_min").val();
+  var max = $("#Corporate_profits_with_IVA_and_CCAdj_max").val();
+  Corporate_profits_with_IVA_and_CCAdj_chart.draw(min,max);
+  Corporate_profits_with_IVA_and_CCAdj_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Corporate_profits_with_IVA_and_CCAdj_chart = new Multi_chart([["data.csv",["Corporate_profits_with_IVA_and_CCAdj"]]],function(data){return data;},"#Corporate_profits_with_IVA_and_CCAdj","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Taxes_on_corporate_income](#Taxes_on_corporate_income)
+       </div>
+       <div class="multi_chart" id="Taxes_on_corporate_income"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Taxes_on_corporate_income_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Taxes_on_corporate_income_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Taxes_on_corporate_income_min").change(function(){
+  var min = $("#Taxes_on_corporate_income_min").val();
+  var max = $("#Taxes_on_corporate_income_max").val();
+  Taxes_on_corporate_income_chart.draw(min,max);
+});
+$("#Taxes_on_corporate_income_max").change(function(){
+  var min = $("#Taxes_on_corporate_income_min").val();
+  var max = $("#Taxes_on_corporate_income_max").val();
+  Taxes_on_corporate_income_chart.draw(min,max);
+  Taxes_on_corporate_income_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Taxes_on_corporate_income_chart = new Multi_chart([["data.csv",["Taxes_on_corporate_income"]]],function(data){return data;},"#Taxes_on_corporate_income","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Profits_after_tax_with_IVA_and_CCAdj](#Profits_after_tax_with_IVA_and_CCAdj)
+       </div>
+       <div class="multi_chart" id="Profits_after_tax_with_IVA_and_CCAdj"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Profits_after_tax_with_IVA_and_CCAdj_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Profits_after_tax_with_IVA_and_CCAdj_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Profits_after_tax_with_IVA_and_CCAdj_min").change(function(){
+  var min = $("#Profits_after_tax_with_IVA_and_CCAdj_min").val();
+  var max = $("#Profits_after_tax_with_IVA_and_CCAdj_max").val();
+  Profits_after_tax_with_IVA_and_CCAdj_chart.draw(min,max);
+});
+$("#Profits_after_tax_with_IVA_and_CCAdj_max").change(function(){
+  var min = $("#Profits_after_tax_with_IVA_and_CCAdj_min").val();
+  var max = $("#Profits_after_tax_with_IVA_and_CCAdj_max").val();
+  Profits_after_tax_with_IVA_and_CCAdj_chart.draw(min,max);
+  Profits_after_tax_with_IVA_and_CCAdj_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Profits_after_tax_with_IVA_and_CCAdj_chart = new Multi_chart([["data.csv",["Profits_after_tax_with_IVA_and_CCAdj"]]],function(data){return data;},"#Profits_after_tax_with_IVA_and_CCAdj","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Net_dividends](#Net_dividends)
+       </div>
+       <div class="multi_chart" id="Net_dividends"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Net_dividends_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Net_dividends_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Net_dividends_min").change(function(){
+  var min = $("#Net_dividends_min").val();
+  var max = $("#Net_dividends_max").val();
+  Net_dividends_chart.draw(min,max);
+});
+$("#Net_dividends_max").change(function(){
+  var min = $("#Net_dividends_min").val();
+  var max = $("#Net_dividends_max").val();
+  Net_dividends_chart.draw(min,max);
+  Net_dividends_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Net_dividends_chart = new Multi_chart([["data.csv",["Net_dividends"]]],function(data){return data;},"#Net_dividends","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Undistributed_profits_with_IVA_and_CCAdj](#Undistributed_profits_with_IVA_and_CCAdj)
+       </div>
+       <div class="multi_chart" id="Undistributed_profits_with_IVA_and_CCAdj"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Undistributed_profits_with_IVA_and_CCAdj_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Undistributed_profits_with_IVA_and_CCAdj_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Undistributed_profits_with_IVA_and_CCAdj_min").change(function(){
+  var min = $("#Undistributed_profits_with_IVA_and_CCAdj_min").val();
+  var max = $("#Undistributed_profits_with_IVA_and_CCAdj_max").val();
+  Undistributed_profits_with_IVA_and_CCAdj_chart.draw(min,max);
+});
+$("#Undistributed_profits_with_IVA_and_CCAdj_max").change(function(){
+  var min = $("#Undistributed_profits_with_IVA_and_CCAdj_min").val();
+  var max = $("#Undistributed_profits_with_IVA_and_CCAdj_max").val();
+  Undistributed_profits_with_IVA_and_CCAdj_chart.draw(min,max);
+  Undistributed_profits_with_IVA_and_CCAdj_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Undistributed_profits_with_IVA_and_CCAdj_chart = new Multi_chart([["data.csv",["Undistributed_profits_with_IVA_and_CCAdj"]]],function(data){return data;},"#Undistributed_profits_with_IVA_and_CCAdj","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Gross_value_added_of_financial_corporate_business_1](#Gross_value_added_of_financial_corporate_business_1)
+       </div>
+       <div class="multi_chart" id="Gross_value_added_of_financial_corporate_business_1"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Gross_value_added_of_financial_corporate_business_1_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Gross_value_added_of_financial_corporate_business_1_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Gross_value_added_of_financial_corporate_business_1_min").change(function(){
+  var min = $("#Gross_value_added_of_financial_corporate_business_1_min").val();
+  var max = $("#Gross_value_added_of_financial_corporate_business_1_max").val();
+  Gross_value_added_of_financial_corporate_business_1_chart.draw(min,max);
+});
+$("#Gross_value_added_of_financial_corporate_business_1_max").change(function(){
+  var min = $("#Gross_value_added_of_financial_corporate_business_1_min").val();
+  var max = $("#Gross_value_added_of_financial_corporate_business_1_max").val();
+  Gross_value_added_of_financial_corporate_business_1_chart.draw(min,max);
+  Gross_value_added_of_financial_corporate_business_1_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Gross_value_added_of_financial_corporate_business_1_chart = new Multi_chart([["data.csv",["Gross_value_added_of_financial_corporate_business_1"]]],function(data){return data;},"#Gross_value_added_of_financial_corporate_business_1","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Gross_value_added_of_nonfinancial_corporate_business_1](#Gross_value_added_of_nonfinancial_corporate_business_1)
+       </div>
+       <div class="multi_chart" id="Gross_value_added_of_nonfinancial_corporate_business_1"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Gross_value_added_of_nonfinancial_corporate_business_1_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Gross_value_added_of_nonfinancial_corporate_business_1_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Gross_value_added_of_nonfinancial_corporate_business_1_min").change(function(){
+  var min = $("#Gross_value_added_of_nonfinancial_corporate_business_1_min").val();
+  var max = $("#Gross_value_added_of_nonfinancial_corporate_business_1_max").val();
+  Gross_value_added_of_nonfinancial_corporate_business_1_chart.draw(min,max);
+});
+$("#Gross_value_added_of_nonfinancial_corporate_business_1_max").change(function(){
+  var min = $("#Gross_value_added_of_nonfinancial_corporate_business_1_min").val();
+  var max = $("#Gross_value_added_of_nonfinancial_corporate_business_1_max").val();
+  Gross_value_added_of_nonfinancial_corporate_business_1_chart.draw(min,max);
+  Gross_value_added_of_nonfinancial_corporate_business_1_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Gross_value_added_of_nonfinancial_corporate_business_1_chart = new Multi_chart([["data.csv",["Gross_value_added_of_nonfinancial_corporate_business_1"]]],function(data){return data;},"#Gross_value_added_of_nonfinancial_corporate_business_1","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Profits_before_tax_without_IVA_and_CCAdj](#Profits_before_tax_without_IVA_and_CCAdj)
+       </div>
+       <div class="multi_chart" id="Profits_before_tax_without_IVA_and_CCAdj"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Profits_before_tax_without_IVA_and_CCAdj_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Profits_before_tax_without_IVA_and_CCAdj_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Profits_before_tax_without_IVA_and_CCAdj_min").change(function(){
+  var min = $("#Profits_before_tax_without_IVA_and_CCAdj_min").val();
+  var max = $("#Profits_before_tax_without_IVA_and_CCAdj_max").val();
+  Profits_before_tax_without_IVA_and_CCAdj_chart.draw(min,max);
+});
+$("#Profits_before_tax_without_IVA_and_CCAdj_max").change(function(){
+  var min = $("#Profits_before_tax_without_IVA_and_CCAdj_min").val();
+  var max = $("#Profits_before_tax_without_IVA_and_CCAdj_max").val();
+  Profits_before_tax_without_IVA_and_CCAdj_chart.draw(min,max);
+  Profits_before_tax_without_IVA_and_CCAdj_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Profits_before_tax_without_IVA_and_CCAdj_chart = new Multi_chart([["data.csv",["Profits_before_tax_without_IVA_and_CCAdj"]]],function(data){return data;},"#Profits_before_tax_without_IVA_and_CCAdj","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Profits_after_tax_without_IVA_and_CCAdj](#Profits_after_tax_without_IVA_and_CCAdj)
+       </div>
+       <div class="multi_chart" id="Profits_after_tax_without_IVA_and_CCAdj"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Profits_after_tax_without_IVA_and_CCAdj_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Profits_after_tax_without_IVA_and_CCAdj_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Profits_after_tax_without_IVA_and_CCAdj_min").change(function(){
+  var min = $("#Profits_after_tax_without_IVA_and_CCAdj_min").val();
+  var max = $("#Profits_after_tax_without_IVA_and_CCAdj_max").val();
+  Profits_after_tax_without_IVA_and_CCAdj_chart.draw(min,max);
+});
+$("#Profits_after_tax_without_IVA_and_CCAdj_max").change(function(){
+  var min = $("#Profits_after_tax_without_IVA_and_CCAdj_min").val();
+  var max = $("#Profits_after_tax_without_IVA_and_CCAdj_max").val();
+  Profits_after_tax_without_IVA_and_CCAdj_chart.draw(min,max);
+  Profits_after_tax_without_IVA_and_CCAdj_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Profits_after_tax_without_IVA_and_CCAdj_chart = new Multi_chart([["data.csv",["Profits_after_tax_without_IVA_and_CCAdj"]]],function(data){return data;},"#Profits_after_tax_without_IVA_and_CCAdj","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Undistributed_profits_after_tax_without_IVA_and_CCAdj](#Undistributed_profits_after_tax_without_IVA_and_CCAdj)
+       </div>
+       <div class="multi_chart" id="Undistributed_profits_after_tax_without_IVA_and_CCAdj"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Undistributed_profits_after_tax_without_IVA_and_CCAdj_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Undistributed_profits_after_tax_without_IVA_and_CCAdj_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Undistributed_profits_after_tax_without_IVA_and_CCAdj_min").change(function(){
+  var min = $("#Undistributed_profits_after_tax_without_IVA_and_CCAdj_min").val();
+  var max = $("#Undistributed_profits_after_tax_without_IVA_and_CCAdj_max").val();
+  Undistributed_profits_after_tax_without_IVA_and_CCAdj_chart.draw(min,max);
+});
+$("#Undistributed_profits_after_tax_without_IVA_and_CCAdj_max").change(function(){
+  var min = $("#Undistributed_profits_after_tax_without_IVA_and_CCAdj_min").val();
+  var max = $("#Undistributed_profits_after_tax_without_IVA_and_CCAdj_max").val();
+  Undistributed_profits_after_tax_without_IVA_and_CCAdj_chart.draw(min,max);
+  Undistributed_profits_after_tax_without_IVA_and_CCAdj_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Undistributed_profits_after_tax_without_IVA_and_CCAdj_chart = new Multi_chart([["data.csv",["Undistributed_profits_after_tax_without_IVA_and_CCAdj"]]],function(data){return data;},"#Undistributed_profits_after_tax_without_IVA_and_CCAdj","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Inventory_valuation_adjustment](#Inventory_valuation_adjustment)
+       </div>
+       <div class="multi_chart" id="Inventory_valuation_adjustment"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Inventory_valuation_adjustment_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Inventory_valuation_adjustment_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Inventory_valuation_adjustment_min").change(function(){
+  var min = $("#Inventory_valuation_adjustment_min").val();
+  var max = $("#Inventory_valuation_adjustment_max").val();
+  Inventory_valuation_adjustment_chart.draw(min,max);
+});
+$("#Inventory_valuation_adjustment_max").change(function(){
+  var min = $("#Inventory_valuation_adjustment_min").val();
+  var max = $("#Inventory_valuation_adjustment_max").val();
+  Inventory_valuation_adjustment_chart.draw(min,max);
+  Inventory_valuation_adjustment_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Inventory_valuation_adjustment_chart = new Multi_chart([["data.csv",["Inventory_valuation_adjustment"]]],function(data){return data;},"#Inventory_valuation_adjustment","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Capital_consumption_adjustment](#Capital_consumption_adjustment)
+       </div>
+       <div class="multi_chart" id="Capital_consumption_adjustment"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Capital_consumption_adjustment_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Capital_consumption_adjustment_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Capital_consumption_adjustment_min").change(function(){
+  var min = $("#Capital_consumption_adjustment_min").val();
+  var max = $("#Capital_consumption_adjustment_max").val();
+  Capital_consumption_adjustment_chart.draw(min,max);
+});
+$("#Capital_consumption_adjustment_max").change(function(){
+  var min = $("#Capital_consumption_adjustment_min").val();
+  var max = $("#Capital_consumption_adjustment_max").val();
+  Capital_consumption_adjustment_chart.draw(min,max);
+  Capital_consumption_adjustment_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Capital_consumption_adjustment_chart = new Multi_chart([["data.csv",["Capital_consumption_adjustment"]]],function(data){return data;},"#Capital_consumption_adjustment","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Gross_value_added_of_nonfinancial_corporate_business_2](#Gross_value_added_of_nonfinancial_corporate_business_2)
+       </div>
+       <div class="multi_chart" id="Gross_value_added_of_nonfinancial_corporate_business_2"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Gross_value_added_of_nonfinancial_corporate_business_2_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Gross_value_added_of_nonfinancial_corporate_business_2_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Gross_value_added_of_nonfinancial_corporate_business_2_min").change(function(){
+  var min = $("#Gross_value_added_of_nonfinancial_corporate_business_2_min").val();
+  var max = $("#Gross_value_added_of_nonfinancial_corporate_business_2_max").val();
+  Gross_value_added_of_nonfinancial_corporate_business_2_chart.draw(min,max);
+});
+$("#Gross_value_added_of_nonfinancial_corporate_business_2_max").change(function(){
+  var min = $("#Gross_value_added_of_nonfinancial_corporate_business_2_min").val();
+  var max = $("#Gross_value_added_of_nonfinancial_corporate_business_2_max").val();
+  Gross_value_added_of_nonfinancial_corporate_business_2_chart.draw(min,max);
+  Gross_value_added_of_nonfinancial_corporate_business_2_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Gross_value_added_of_nonfinancial_corporate_business_2_chart = new Multi_chart([["data.csv",["Gross_value_added_of_nonfinancial_corporate_business_2"]]],function(data){return data;},"#Gross_value_added_of_nonfinancial_corporate_business_2","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Consumption_of_fixed_capital_3](#Consumption_of_fixed_capital_3)
+       </div>
+       <div class="multi_chart" id="Consumption_of_fixed_capital_3"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Consumption_of_fixed_capital_3_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Consumption_of_fixed_capital_3_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Consumption_of_fixed_capital_3_min").change(function(){
+  var min = $("#Consumption_of_fixed_capital_3_min").val();
+  var max = $("#Consumption_of_fixed_capital_3_max").val();
+  Consumption_of_fixed_capital_3_chart.draw(min,max);
+});
+$("#Consumption_of_fixed_capital_3_max").change(function(){
+  var min = $("#Consumption_of_fixed_capital_3_min").val();
+  var max = $("#Consumption_of_fixed_capital_3_max").val();
+  Consumption_of_fixed_capital_3_chart.draw(min,max);
+  Consumption_of_fixed_capital_3_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Consumption_of_fixed_capital_3_chart = new Multi_chart([["data.csv",["Consumption_of_fixed_capital_3"]]],function(data){return data;},"#Consumption_of_fixed_capital_3","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Net_value_added_4](#Net_value_added_4)
+       </div>
+       <div class="multi_chart" id="Net_value_added_4"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Net_value_added_4_min" name="min_year" value="1929" min="1929" max="2014">
+          maximum year:
+         <input type="number" id="Net_value_added_4_max" name="max_year" value="2014" min="1929" max="2014">
+       </form>
+
+<script>
+$("#Net_value_added_4_min").change(function(){
+  var min = $("#Net_value_added_4_min").val();
+  var max = $("#Net_value_added_4_max").val();
+  Net_value_added_4_chart.draw(min,max);
+});
+$("#Net_value_added_4_max").change(function(){
+  var min = $("#Net_value_added_4_min").val();
+  var max = $("#Net_value_added_4_max").val();
+  Net_value_added_4_chart.draw(min,max);
+  Net_value_added_4_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Net_value_added_4_chart = new Multi_chart([["data.csv",["Net_value_added_4"]]],function(data){return data;},"#Net_value_added_4","billions");
+```
+       </div>
+       <div class="markdown"> 
 ```data
-year,Gross_value_added_of_corporate_business_1,Consumption_of_fixed_capital,Net_value_added,Compensation_of_employees,Wages_and_salaries,Supplements_to_wages_and_salaries,Taxes_on_production_and_imports_less_subsidies,Net_operating_surplus,Net_interest_and_miscellaneous_payments,Business_current_transfer_payments_(net),Corporate_profits_with_IVA_and_CCAdj,Taxes_on_corporate_income,Profits_after_tax_with_IVA_and_CCAdj,Net_dividends,Undistributed_profits_with_IVA_and_CCAdj,Gross_value_added_of_financial_corporate_business_1,Gross_value_added_of_nonfinancial_corporate_business_1,Profits_before_tax_(without_IVA_and_CCAdj),Profits_after_tax_(without_IVA_and_CCAdj),Undistributed_profits_after_tax_(without_IVA_and_CCAdj),Inventory_valuation_adjustment,Capital_consumption_adjustment,Gross_value_added_of_nonfinancial_corporate_business_2,Consumption_of_fixed_capital_3,Net_value_added_4
+year,Gross_value_added_of_corporate_business_1,Consumption_of_fixed_capital,Net_value_added,Compensation_of_employees,Wages_and_salaries,Supplements_to_wages_and_salaries,Taxes_on_production_and_imports_less_subsidies,Net_operating_surplus,Net_interest_and_miscellaneous_payments,Business_current_transfer_payments_net,Corporate_profits_with_IVA_and_CCAdj,Taxes_on_corporate_income,Profits_after_tax_with_IVA_and_CCAdj,Net_dividends,Undistributed_profits_with_IVA_and_CCAdj,Gross_value_added_of_financial_corporate_business_1,Gross_value_added_of_nonfinancial_corporate_business_1,Profits_before_tax_without_IVA_and_CCAdj,Profits_after_tax_without_IVA_and_CCAdj,Undistributed_profits_after_tax_without_IVA_and_CCAdj,Inventory_valuation_adjustment,Capital_consumption_adjustment,Gross_value_added_of_nonfinancial_corporate_business_2,Consumption_of_fixed_capital_3,Net_value_added_4
 1929,54.8,5.0,45.8,32.1,31.8,0.4,3.0,10.7,1.4,0.3,9.0,1.1,7.9,5.1,2.8,4.0,50.8,9.0,7.9,3.7,0.5,-0.5,358.1,49.4,308.6
 1930,48.2,4.9,40.4,28.8,28.4,0.4,3.0,8.6,1.6,0.3,6.7,0.7,6.0,5.0,1.0,2.9,45.3,3.7,2.9,-1.8,3.3,-0.2,333.3,50.5,282.8
 1931,37.8,4.6,30.9,23.5,23.2,0.3,2.8,4.6,1.8,0.3,2.4,0.5,2.0,3.8,-1.8,2.4,35.4,0.0,-0.5,-4.0,2.4,0.0,301.3,50.2,251.1
@@ -114,9 +833,12 @@ year,Gross_value_added_of_corporate_business_1,Consumption_of_fixed_capital,Net_
 2013,9454.0,1232.2,7084.6,4747.4,3953.5,793.9,724.9,1612.3,280.4,95.1,1236.8,284.6,952.2,525.2,427.0,1137.1,8316.8,1323.2,1038.6,500.2,3.2,-89.6,7954.8,1177.1,6777.7
 2014,9890.4,1285.7,7355.2,4995.8,4178.9,816.9,745.2,1614.3,258.1,85.1,1271.1,316.2,954.9,573.8,381.1,1249.5,8641.0,1366.1,1049.9,551.3,-2.9,-92.1,8207.3,1212.8,6994.5
 ```
-
+       </div>
 
        </div>
     </div>
 </body>
 </html>
+
+
+

@@ -35,10 +35,21 @@ for(var i = 0; i<lines.length; i++) {
     if(isNaN(array[1])){
       continue;
     }
-    var name = array[3].trim().replace(/ /mg,"_");
-    array = array[4].split(",");
+    var name = array[3].trim().replace(/ /mg,"_").replace("-","_").replace(/[\(\):\'\",]/mg,"");
+    array.shift();
+    array.shift();
+    array.shift();
+    array.shift();
+    array = array.join("").split(",");
     array = array.slice(1);
-    array.forEach(function(each,index){ data[index][name] = each;}); 
+    array.forEach(function(each,index){ 
+      if(isNaN(each)) { 
+        data[index][name] = -1000000000;  
+      } else { 
+        data[index][name] = each; 
+      } 
+    });
+ 
   } else {
     if(line.indexOf('"Line"') == 0) {
       var years = line.replace(/"/mg,'').split(",").slice(2);
@@ -48,6 +59,8 @@ for(var i = 0; i<lines.length; i++) {
   }
 }
 
+var min_year = data[0].year;
+var max_year = data[data.length-1].year;
 
 var keys = Object.keys(data[0]);
 keys.shift();
@@ -57,13 +70,35 @@ keys.forEach(function(key) {
 .# [@{key}](#@{key})
 .       </div>
 .       <div class="multi_chart" id="@{key}"></div>
+.       <form style="margin-left:40%">
+.          minimum year:
+.         <input type="number" id="@{key}_min" name="min_year" value="@{min_year}" min="@{min_year}" max="@{max_year}">
+.          maximum year:
+.         <input type="number" id="@{key}_max" name="max_year" value="@{max_year}" min="@{min_year}" max="@{max_year}">
+.       </form>
+.
+.<script>
+
+.$("#@{key}_min").change(function(){
+.  var min = $("#@{key}_min").val();
+.  var max = $("#@{key}_max").val();
+.  @{key}_chart.draw(min,max);
+.});
+.$("#@{key}_max").change(function(){
+.  var min = $("#@{key}_min").val();
+.  var max = $("#@{key}_max").val();
+.  @{key}_chart.draw(min,max);
+.  @{key}_chart.draw(min,max);
+.});
+.</script>
 
 .       <div class="markdown"> 
 .```javascript
-.multi_chart([["data.csv",["@{key}"]]],function(data){return data;},"#chart","billions");
+.var @{key}_chart = new Multi_chart([["data.csv",["@{key}"]]],function(data){return data;},"#@{key}","billions");
 .```
 .       </div>
 });
+.       <div class="markdown"> 
 .```data
 .@{Object.keys(data[0]).join(",")}
 data.forEach(function(each){
@@ -74,6 +109,7 @@ data.forEach(function(each){
 .@{larray.join(",")}
 });
 .```
+.       </div>
 .
 .       </div>
 .    </div>

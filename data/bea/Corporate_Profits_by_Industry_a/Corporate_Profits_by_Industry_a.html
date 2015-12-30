@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Marxistats</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="/d3.min.js"></script>
+<script src="/Markdown.Converter.js"></script>
+<script src="/Markdown.Extra.js"></script>
+<script src="/jquery-2.1.4.min.js"></script>
+<link rel="stylesheet" href="/highlight/styles/default.css">
+<script src="/highlight/highlight.pack.js"></script>
+<script src="/MathJax-master/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="/markdown.js"></script>
+<link rel="stylesheet" href="/markdown.css">
+<script src="/multi_chart.js"></script>
+<link rel="stylesheet" href="/multi_chart.css">
+<script src="code.js"></script>
+</head>
+<body>
+    <div style = "font-size:120">
+       <div class="markdown"> 
+# [Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments](#Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments)
+       </div>
+       <div class="multi_chart" id="Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments_min" name="min_year" value="1929" min="1929" max="1947">
+          maximum year:
+         <input type="number" id="Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments_max" name="max_year" value="1947" min="1929" max="1947">
+       </form>
+
+<script>
+$("#Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments_min").change(function(){
+  var min = $("#Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments_min").val();
+  var max = $("#Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments_max").val();
+  Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments_chart.draw(min,max);
+});
+$("#Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments_max").change(function(){
+  var min = $("#Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments_min").val();
+  var max = $("#Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments_max").val();
+  Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments_chart.draw(min,max);
+  Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments_chart = new Multi_chart([["data.csv",["Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments"]]],function(data){return data;},"#Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Domestic_industries](#Domestic_industries)
+       </div>
+       <div class="multi_chart" id="Domestic_industries"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Domestic_industries_min" name="min_year" value="1929" min="1929" max="1947">
+          maximum year:
+         <input type="number" id="Domestic_industries_max" name="max_year" value="1947" min="1929" max="1947">
+       </form>
+
+<script>
+$("#Domestic_industries_min").change(function(){
+  var min = $("#Domestic_industries_min").val();
+  var max = $("#Domestic_industries_max").val();
+  Domestic_industries_chart.draw(min,max);
+});
+$("#Domestic_industries_max").change(function(){
+  var min = $("#Domestic_industries_min").val();
+  var max = $("#Domestic_industries_max").val();
+  Domestic_industries_chart.draw(min,max);
+  Domestic_industries_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Domestic_industries_chart = new Multi_chart([["data.csv",["Domestic_industries"]]],function(data){return data;},"#Domestic_industries","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Financial](#Financial)
+       </div>
+       <div class="multi_chart" id="Financial"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Financial_min" name="min_year" value="1929" min="1929" max="1947">
+          maximum year:
+         <input type="number" id="Financial_max" name="max_year" value="1947" min="1929" max="1947">
+       </form>
+
+<script>
+$("#Financial_min").change(function(){
+  var min = $("#Financial_min").val();
+  var max = $("#Financial_max").val();
+  Financial_chart.draw(min,max);
+});
+$("#Financial_max").change(function(){
+  var min = $("#Financial_min").val();
+  var max = $("#Financial_max").val();
+  Financial_chart.draw(min,max);
+  Financial_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Financial_chart = new Multi_chart([["data.csv",["Financial"]]],function(data){return data;},"#Financial","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Nonfinancial](#Nonfinancial)
+       </div>
+       <div class="multi_chart" id="Nonfinancial"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Nonfinancial_min" name="min_year" value="1929" min="1929" max="1947">
+          maximum year:
+         <input type="number" id="Nonfinancial_max" name="max_year" value="1947" min="1929" max="1947">
+       </form>
+
+<script>
+$("#Nonfinancial_min").change(function(){
+  var min = $("#Nonfinancial_min").val();
+  var max = $("#Nonfinancial_max").val();
+  Nonfinancial_chart.draw(min,max);
+});
+$("#Nonfinancial_max").change(function(){
+  var min = $("#Nonfinancial_min").val();
+  var max = $("#Nonfinancial_max").val();
+  Nonfinancial_chart.draw(min,max);
+  Nonfinancial_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Nonfinancial_chart = new Multi_chart([["data.csv",["Nonfinancial"]]],function(data){return data;},"#Nonfinancial","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Rest_of_the_world](#Rest_of_the_world)
+       </div>
+       <div class="multi_chart" id="Rest_of_the_world"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Rest_of_the_world_min" name="min_year" value="1929" min="1929" max="1947">
+          maximum year:
+         <input type="number" id="Rest_of_the_world_max" name="max_year" value="1947" min="1929" max="1947">
+       </form>
+
+<script>
+$("#Rest_of_the_world_min").change(function(){
+  var min = $("#Rest_of_the_world_min").val();
+  var max = $("#Rest_of_the_world_max").val();
+  Rest_of_the_world_chart.draw(min,max);
+});
+$("#Rest_of_the_world_max").change(function(){
+  var min = $("#Rest_of_the_world_min").val();
+  var max = $("#Rest_of_the_world_max").val();
+  Rest_of_the_world_chart.draw(min,max);
+  Rest_of_the_world_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Rest_of_the_world_chart = new Multi_chart([["data.csv",["Rest_of_the_world"]]],function(data){return data;},"#Rest_of_the_world","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Corporate_profits_with_inventory_valuation_adjustment](#Corporate_profits_with_inventory_valuation_adjustment)
+       </div>
+       <div class="multi_chart" id="Corporate_profits_with_inventory_valuation_adjustment"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Corporate_profits_with_inventory_valuation_adjustment_min" name="min_year" value="1929" min="1929" max="1947">
+          maximum year:
+         <input type="number" id="Corporate_profits_with_inventory_valuation_adjustment_max" name="max_year" value="1947" min="1929" max="1947">
+       </form>
+
+<script>
+$("#Corporate_profits_with_inventory_valuation_adjustment_min").change(function(){
+  var min = $("#Corporate_profits_with_inventory_valuation_adjustment_min").val();
+  var max = $("#Corporate_profits_with_inventory_valuation_adjustment_max").val();
+  Corporate_profits_with_inventory_valuation_adjustment_chart.draw(min,max);
+});
+$("#Corporate_profits_with_inventory_valuation_adjustment_max").change(function(){
+  var min = $("#Corporate_profits_with_inventory_valuation_adjustment_min").val();
+  var max = $("#Corporate_profits_with_inventory_valuation_adjustment_max").val();
+  Corporate_profits_with_inventory_valuation_adjustment_chart.draw(min,max);
+  Corporate_profits_with_inventory_valuation_adjustment_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Corporate_profits_with_inventory_valuation_adjustment_chart = new Multi_chart([["data.csv",["Corporate_profits_with_inventory_valuation_adjustment"]]],function(data){return data;},"#Corporate_profits_with_inventory_valuation_adjustment","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Federal_Reserve_banks](#Federal_Reserve_banks)
+       </div>
+       <div class="multi_chart" id="Federal_Reserve_banks"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Federal_Reserve_banks_min" name="min_year" value="1929" min="1929" max="1947">
+          maximum year:
+         <input type="number" id="Federal_Reserve_banks_max" name="max_year" value="1947" min="1929" max="1947">
+       </form>
+
+<script>
+$("#Federal_Reserve_banks_min").change(function(){
+  var min = $("#Federal_Reserve_banks_min").val();
+  var max = $("#Federal_Reserve_banks_max").val();
+  Federal_Reserve_banks_chart.draw(min,max);
+});
+$("#Federal_Reserve_banks_max").change(function(){
+  var min = $("#Federal_Reserve_banks_min").val();
+  var max = $("#Federal_Reserve_banks_max").val();
+  Federal_Reserve_banks_chart.draw(min,max);
+  Federal_Reserve_banks_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Federal_Reserve_banks_chart = new Multi_chart([["data.csv",["Federal_Reserve_banks"]]],function(data){return data;},"#Federal_Reserve_banks","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Other](#Other)
+       </div>
+       <div class="multi_chart" id="Other"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Other_min" name="min_year" value="1929" min="1929" max="1947">
+          maximum year:
+         <input type="number" id="Other_max" name="max_year" value="1947" min="1929" max="1947">
+       </form>
+
+<script>
+$("#Other_min").change(function(){
+  var min = $("#Other_min").val();
+  var max = $("#Other_max").val();
+  Other_chart.draw(min,max);
+});
+$("#Other_max").change(function(){
+  var min = $("#Other_min").val();
+  var max = $("#Other_max").val();
+  Other_chart.draw(min,max);
+  Other_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Other_chart = new Multi_chart([["data.csv",["Other"]]],function(data){return data;},"#Other","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Manufacturing](#Manufacturing)
+       </div>
+       <div class="multi_chart" id="Manufacturing"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Manufacturing_min" name="min_year" value="1929" min="1929" max="1947">
+          maximum year:
+         <input type="number" id="Manufacturing_max" name="max_year" value="1947" min="1929" max="1947">
+       </form>
+
+<script>
+$("#Manufacturing_min").change(function(){
+  var min = $("#Manufacturing_min").val();
+  var max = $("#Manufacturing_max").val();
+  Manufacturing_chart.draw(min,max);
+});
+$("#Manufacturing_max").change(function(){
+  var min = $("#Manufacturing_min").val();
+  var max = $("#Manufacturing_max").val();
+  Manufacturing_chart.draw(min,max);
+  Manufacturing_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Manufacturing_chart = new Multi_chart([["data.csv",["Manufacturing"]]],function(data){return data;},"#Manufacturing","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Durable_goods](#Durable_goods)
+       </div>
+       <div class="multi_chart" id="Durable_goods"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Durable_goods_min" name="min_year" value="1929" min="1929" max="1947">
+          maximum year:
+         <input type="number" id="Durable_goods_max" name="max_year" value="1947" min="1929" max="1947">
+       </form>
+
+<script>
+$("#Durable_goods_min").change(function(){
+  var min = $("#Durable_goods_min").val();
+  var max = $("#Durable_goods_max").val();
+  Durable_goods_chart.draw(min,max);
+});
+$("#Durable_goods_max").change(function(){
+  var min = $("#Durable_goods_min").val();
+  var max = $("#Durable_goods_max").val();
+  Durable_goods_chart.draw(min,max);
+  Durable_goods_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Durable_goods_chart = new Multi_chart([["data.csv",["Durable_goods"]]],function(data){return data;},"#Durable_goods","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Nondurable_goods](#Nondurable_goods)
+       </div>
+       <div class="multi_chart" id="Nondurable_goods"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Nondurable_goods_min" name="min_year" value="1929" min="1929" max="1947">
+          maximum year:
+         <input type="number" id="Nondurable_goods_max" name="max_year" value="1947" min="1929" max="1947">
+       </form>
+
+<script>
+$("#Nondurable_goods_min").change(function(){
+  var min = $("#Nondurable_goods_min").val();
+  var max = $("#Nondurable_goods_max").val();
+  Nondurable_goods_chart.draw(min,max);
+});
+$("#Nondurable_goods_max").change(function(){
+  var min = $("#Nondurable_goods_min").val();
+  var max = $("#Nondurable_goods_max").val();
+  Nondurable_goods_chart.draw(min,max);
+  Nondurable_goods_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Nondurable_goods_chart = new Multi_chart([["data.csv",["Nondurable_goods"]]],function(data){return data;},"#Nondurable_goods","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Transportation_and_public_utilities](#Transportation_and_public_utilities)
+       </div>
+       <div class="multi_chart" id="Transportation_and_public_utilities"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Transportation_and_public_utilities_min" name="min_year" value="1929" min="1929" max="1947">
+          maximum year:
+         <input type="number" id="Transportation_and_public_utilities_max" name="max_year" value="1947" min="1929" max="1947">
+       </form>
+
+<script>
+$("#Transportation_and_public_utilities_min").change(function(){
+  var min = $("#Transportation_and_public_utilities_min").val();
+  var max = $("#Transportation_and_public_utilities_max").val();
+  Transportation_and_public_utilities_chart.draw(min,max);
+});
+$("#Transportation_and_public_utilities_max").change(function(){
+  var min = $("#Transportation_and_public_utilities_min").val();
+  var max = $("#Transportation_and_public_utilities_max").val();
+  Transportation_and_public_utilities_chart.draw(min,max);
+  Transportation_and_public_utilities_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Transportation_and_public_utilities_chart = new Multi_chart([["data.csv",["Transportation_and_public_utilities"]]],function(data){return data;},"#Transportation_and_public_utilities","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Wholesale_trade_and_retail_trade_and_automobile_services](#Wholesale_trade_and_retail_trade_and_automobile_services)
+       </div>
+       <div class="multi_chart" id="Wholesale_trade_and_retail_trade_and_automobile_services"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Wholesale_trade_and_retail_trade_and_automobile_services_min" name="min_year" value="1929" min="1929" max="1947">
+          maximum year:
+         <input type="number" id="Wholesale_trade_and_retail_trade_and_automobile_services_max" name="max_year" value="1947" min="1929" max="1947">
+       </form>
+
+<script>
+$("#Wholesale_trade_and_retail_trade_and_automobile_services_min").change(function(){
+  var min = $("#Wholesale_trade_and_retail_trade_and_automobile_services_min").val();
+  var max = $("#Wholesale_trade_and_retail_trade_and_automobile_services_max").val();
+  Wholesale_trade_and_retail_trade_and_automobile_services_chart.draw(min,max);
+});
+$("#Wholesale_trade_and_retail_trade_and_automobile_services_max").change(function(){
+  var min = $("#Wholesale_trade_and_retail_trade_and_automobile_services_min").val();
+  var max = $("#Wholesale_trade_and_retail_trade_and_automobile_services_max").val();
+  Wholesale_trade_and_retail_trade_and_automobile_services_chart.draw(min,max);
+  Wholesale_trade_and_retail_trade_and_automobile_services_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Wholesale_trade_and_retail_trade_and_automobile_services_chart = new Multi_chart([["data.csv",["Wholesale_trade_and_retail_trade_and_automobile_services"]]],function(data){return data;},"#Wholesale_trade_and_retail_trade_and_automobile_services","billions");
+```
+       </div>
+       <div class="markdown"> 
+```data
+year,Corporate_profits_with_inventory_valuation_and_capital_consumption_adjustments,Domestic_industries,Financial,Nonfinancial,Rest_of_the_world,Corporate_profits_with_inventory_valuation_adjustment,Federal_Reserve_banks,Other,Manufacturing,Durable_goods,Nondurable_goods,Transportation_and_public_utilities,Wholesale_trade_and_retail_trade_and_automobile_services
+1929,10.8,11.1,1.7,9.5,0.2,11.4,0.0,1.1,5.4,2.6,2.7,1.9,1.2
+1930,7.5,7.7,0.8,6.9,0.1,7.8,0.0,0.6,4.0,1.4,2.6,1.2,1.1
+1931,3.0,3.0,0.6,2.4,0.0,3.0,0.0,-0.1,1.4,0.0,1.5,0.6,0.5
+1932,-0.2,-0.3,0.7,-1.0,0.0,-0.3,0.0,-0.6,-0.5,-1.1,0.6,0.2,-0.1
+1933,-0.2,-0.3,0.8,-1.1,0.0,-0.3,0.0,-0.5,-0.4,-0.6,0.1,0.1,-0.3
+1934,2.5,2.5,0.6,2.0,0.1,2.6,0.0,-0.1,1.0,0.2,0.8,0.4,0.6
+1935,4.0,4.0,0.6,3.4,0.2,4.1,0.0,0.1,2.1,0.9,1.2,0.5,0.8
+1936,6.2,6.3,0.9,5.4,0.1,6.4,0.0,0.5,3.2,1.6,1.6,0.7,1.0
+1937,7.1,7.3,0.9,6.5,0.3,7.6,0.0,0.7,3.8,1.7,2.2,0.8,1.1
+1938,5.0,5.3,1.0,4.3,0.3,5.6,0.0,0.5,2.3,0.7,1.6,0.6,0.9
+1939,6.6,6.7,1.0,5.8,0.3,7.1,0.0,0.6,3.4,1.6,1.7,1.0,0.8
+1940,9.9,10.2,1.1,9.1,0.3,10.4,0.0,0.8,5.6,3.1,2.5,1.3,1.3
+1941,15.7,15.9,1.2,14.7,0.4,16.3,0.0,1.3,9.8,6.5,3.2,2.0,1.5
+1942,20.8,20.9,1.4,19.5,0.4,21.3,0.0,1.6,12.1,7.3,4.8,3.5,2.4
+1943,24.9,24.7,1.5,23.2,0.4,25.1,0.0,1.8,13.9,8.1,5.8,4.4,3.1
+1944,25.0,24.1,1.7,22.3,0.4,24.5,0.1,1.8,13.4,7.4,6.0,3.9,3.3
+1945,20.5,19.5,1.8,17.7,0.3,19.8,0.1,1.7,9.9,4.6,5.3,2.8,3.4
+1946,18.2,19.6,2.2,17.4,0.7,20.3,0.1,2.3,9.4,2.6,6.7,1.9,3.9
+1947,24.2,25.8,1.9,23.8,1.0,26.7,0.1,2.9,14.0,6.0,8.0,2.2,4.7
+```
+       </div>
+
+       </div>
+    </div>
+</body>
+</html>
+
+
+

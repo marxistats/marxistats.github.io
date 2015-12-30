@@ -13,4 +13,4 @@ var Sole_proprietorships_chart = new Multi_chart([["data.csv",["Sole_proprietors
 var Partnerships_chart = new Multi_chart([["data.csv",["Partnerships"]]],function(data){return data;},"#Partnerships","billions");
 var Nonprofit_institutions_chart = new Multi_chart([["data.csv",["Nonprofit_institutions"]]],function(data){return data;},"#Nonprofit_institutions","billions");
 var Households_chart = new Multi_chart([["data.csv",["Households"]]],function(data){return data;},"#Households","billions");
-var Tax_exempt_cooperatives_chart = new Multi_chart([["data.csv",["Tax-exempt_cooperatives"]]],function(data){return data;},"#Tax-exempt_cooperatives","billions");
+var Tax_exempt_cooperatives_chart = new Multi_chart([["data.csv",["Tax_exempt_cooperatives"]]],function(data){return data;},"#Tax_exempt_cooperatives","billions");
