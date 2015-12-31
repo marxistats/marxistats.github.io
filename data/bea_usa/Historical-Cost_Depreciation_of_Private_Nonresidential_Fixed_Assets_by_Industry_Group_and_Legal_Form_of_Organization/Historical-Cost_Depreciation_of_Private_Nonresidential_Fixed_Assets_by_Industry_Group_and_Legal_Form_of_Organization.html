@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Marxistats</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="/d3.min.js"></script>
+<script src="/Markdown.Converter.js"></script>
+<script src="/Markdown.Extra.js"></script>
+<script src="/jquery-2.1.4.min.js"></script>
+<link rel="stylesheet" href="/highlight/styles/default.css">
+<script src="/highlight/highlight.pack.js"></script>
+<script src="/MathJax-master/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="/markdown.js"></script>
+<link rel="stylesheet" href="/markdown.css">
+<script src="/multi_chart.js"></script>
+<link rel="stylesheet" href="/multi_chart.css">
+<script src="code.js"></script>
+</head>
+<body>
+    <div style = "font-size:120">
+<h1>Table 4.6. Historical-Cost Depreciation of Private Nonresidential Fixed Assets by Industry Group and Legal Form of Organization <a href="https://bea.gov">bea.gov</a></h1>
+       <div class="markdown"> 
+# [Private nonresidential fixed assets](#Private_nonresidential_fixed_assets)
+       </div>
+       <div class="multi_chart" id="Private_nonresidential_fixed_assets"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Private_nonresidential_fixed_assets_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="Private_nonresidential_fixed_assets_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#Private_nonresidential_fixed_assets_min").change(function(){
+  var min = $("#Private_nonresidential_fixed_assets_min").val();
+  var max = $("#Private_nonresidential_fixed_assets_max").val();
+  Private_nonresidential_fixed_assets_chart.draw(min,max);
+});
+$("#Private_nonresidential_fixed_assets_max").change(function(){
+  var min = $("#Private_nonresidential_fixed_assets_min").val();
+  var max = $("#Private_nonresidential_fixed_assets_max").val();
+  Private_nonresidential_fixed_assets_chart.draw(min,max);
+  Private_nonresidential_fixed_assets_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Private_nonresidential_fixed_assets_chart = new Multi_chart([["data.csv",["Private_nonresidential_fixed_assets"]]],function(data){return data;},"#Private_nonresidential_fixed_assets","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Equipment](#Equipment)
+       </div>
+       <div class="multi_chart" id="Equipment"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Equipment_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="Equipment_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#Equipment_min").change(function(){
+  var min = $("#Equipment_min").val();
+  var max = $("#Equipment_max").val();
+  Equipment_chart.draw(min,max);
+});
+$("#Equipment_max").change(function(){
+  var min = $("#Equipment_min").val();
+  var max = $("#Equipment_max").val();
+  Equipment_chart.draw(min,max);
+  Equipment_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Equipment_chart = new Multi_chart([["data.csv",["Equipment"]]],function(data){return data;},"#Equipment","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Structures](#Structures)
+       </div>
+       <div class="multi_chart" id="Structures"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Structures_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="Structures_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#Structures_min").change(function(){
+  var min = $("#Structures_min").val();
+  var max = $("#Structures_max").val();
+  Structures_chart.draw(min,max);
+});
+$("#Structures_max").change(function(){
+  var min = $("#Structures_min").val();
+  var max = $("#Structures_max").val();
+  Structures_chart.draw(min,max);
+  Structures_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Structures_chart = new Multi_chart([["data.csv",["Structures"]]],function(data){return data;},"#Structures","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [Intellectual property products](#Intellectual_property_products)
+       </div>
+       <div class="multi_chart" id="Intellectual_property_products"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="Intellectual_property_products_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="Intellectual_property_products_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#Intellectual_property_products_min").change(function(){
+  var min = $("#Intellectual_property_products_min").val();
+  var max = $("#Intellectual_property_products_max").val();
+  Intellectual_property_products_chart.draw(min,max);
+});
+$("#Intellectual_property_products_max").change(function(){
+  var min = $("#Intellectual_property_products_min").val();
+  var max = $("#Intellectual_property_products_max").val();
+  Intellectual_property_products_chart.draw(min,max);
+  Intellectual_property_products_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var Intellectual_property_products_chart = new Multi_chart([["data.csv",["Intellectual_property_products"]]],function(data){return data;},"#Intellectual_property_products","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By selected industry group Farms](#By_selected_industry_group_Farms)
+       </div>
+       <div class="multi_chart" id="By_selected_industry_group_Farms"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_selected_industry_group_Farms_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_selected_industry_group_Farms_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_selected_industry_group_Farms_min").change(function(){
+  var min = $("#By_selected_industry_group_Farms_min").val();
+  var max = $("#By_selected_industry_group_Farms_max").val();
+  By_selected_industry_group_Farms_chart.draw(min,max);
+});
+$("#By_selected_industry_group_Farms_max").change(function(){
+  var min = $("#By_selected_industry_group_Farms_min").val();
+  var max = $("#By_selected_industry_group_Farms_max").val();
+  By_selected_industry_group_Farms_chart.draw(min,max);
+  By_selected_industry_group_Farms_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_selected_industry_group_Farms_chart = new Multi_chart([["data.csv",["By_selected_industry_group_Farms"]]],function(data){return data;},"#By_selected_industry_group_Farms","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By selected industry group Equipment](#By_selected_industry_group_Equipment)
+       </div>
+       <div class="multi_chart" id="By_selected_industry_group_Equipment"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_selected_industry_group_Equipment_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_selected_industry_group_Equipment_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_selected_industry_group_Equipment_min").change(function(){
+  var min = $("#By_selected_industry_group_Equipment_min").val();
+  var max = $("#By_selected_industry_group_Equipment_max").val();
+  By_selected_industry_group_Equipment_chart.draw(min,max);
+});
+$("#By_selected_industry_group_Equipment_max").change(function(){
+  var min = $("#By_selected_industry_group_Equipment_min").val();
+  var max = $("#By_selected_industry_group_Equipment_max").val();
+  By_selected_industry_group_Equipment_chart.draw(min,max);
+  By_selected_industry_group_Equipment_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_selected_industry_group_Equipment_chart = new Multi_chart([["data.csv",["By_selected_industry_group_Equipment"]]],function(data){return data;},"#By_selected_industry_group_Equipment","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By selected industry group Structures](#By_selected_industry_group_Structures)
+       </div>
+       <div class="multi_chart" id="By_selected_industry_group_Structures"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_selected_industry_group_Structures_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_selected_industry_group_Structures_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_selected_industry_group_Structures_min").change(function(){
+  var min = $("#By_selected_industry_group_Structures_min").val();
+  var max = $("#By_selected_industry_group_Structures_max").val();
+  By_selected_industry_group_Structures_chart.draw(min,max);
+});
+$("#By_selected_industry_group_Structures_max").change(function(){
+  var min = $("#By_selected_industry_group_Structures_min").val();
+  var max = $("#By_selected_industry_group_Structures_max").val();
+  By_selected_industry_group_Structures_chart.draw(min,max);
+  By_selected_industry_group_Structures_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_selected_industry_group_Structures_chart = new Multi_chart([["data.csv",["By_selected_industry_group_Structures"]]],function(data){return data;},"#By_selected_industry_group_Structures","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By selected industry group Intellectual property products](#By_selected_industry_group_Intellectual_property_products)
+       </div>
+       <div class="multi_chart" id="By_selected_industry_group_Intellectual_property_products"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_selected_industry_group_Intellectual_property_products_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_selected_industry_group_Intellectual_property_products_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_selected_industry_group_Intellectual_property_products_min").change(function(){
+  var min = $("#By_selected_industry_group_Intellectual_property_products_min").val();
+  var max = $("#By_selected_industry_group_Intellectual_property_products_max").val();
+  By_selected_industry_group_Intellectual_property_products_chart.draw(min,max);
+});
+$("#By_selected_industry_group_Intellectual_property_products_max").change(function(){
+  var min = $("#By_selected_industry_group_Intellectual_property_products_min").val();
+  var max = $("#By_selected_industry_group_Intellectual_property_products_max").val();
+  By_selected_industry_group_Intellectual_property_products_chart.draw(min,max);
+  By_selected_industry_group_Intellectual_property_products_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_selected_industry_group_Intellectual_property_products_chart = new Multi_chart([["data.csv",["By_selected_industry_group_Intellectual_property_products"]]],function(data){return data;},"#By_selected_industry_group_Intellectual_property_products","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By selected industry group Manufacturing](#By_selected_industry_group_Manufacturing)
+       </div>
+       <div class="multi_chart" id="By_selected_industry_group_Manufacturing"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_selected_industry_group_Manufacturing_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_selected_industry_group_Manufacturing_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_selected_industry_group_Manufacturing_min").change(function(){
+  var min = $("#By_selected_industry_group_Manufacturing_min").val();
+  var max = $("#By_selected_industry_group_Manufacturing_max").val();
+  By_selected_industry_group_Manufacturing_chart.draw(min,max);
+});
+$("#By_selected_industry_group_Manufacturing_max").change(function(){
+  var min = $("#By_selected_industry_group_Manufacturing_min").val();
+  var max = $("#By_selected_industry_group_Manufacturing_max").val();
+  By_selected_industry_group_Manufacturing_chart.draw(min,max);
+  By_selected_industry_group_Manufacturing_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_selected_industry_group_Manufacturing_chart = new Multi_chart([["data.csv",["By_selected_industry_group_Manufacturing"]]],function(data){return data;},"#By_selected_industry_group_Manufacturing","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By selected industry group Nonfarm nonmanufacturing](#By_selected_industry_group_Nonfarm_nonmanufacturing)
+       </div>
+       <div class="multi_chart" id="By_selected_industry_group_Nonfarm_nonmanufacturing"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_selected_industry_group_Nonfarm_nonmanufacturing_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_selected_industry_group_Nonfarm_nonmanufacturing_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_selected_industry_group_Nonfarm_nonmanufacturing_min").change(function(){
+  var min = $("#By_selected_industry_group_Nonfarm_nonmanufacturing_min").val();
+  var max = $("#By_selected_industry_group_Nonfarm_nonmanufacturing_max").val();
+  By_selected_industry_group_Nonfarm_nonmanufacturing_chart.draw(min,max);
+});
+$("#By_selected_industry_group_Nonfarm_nonmanufacturing_max").change(function(){
+  var min = $("#By_selected_industry_group_Nonfarm_nonmanufacturing_min").val();
+  var max = $("#By_selected_industry_group_Nonfarm_nonmanufacturing_max").val();
+  By_selected_industry_group_Nonfarm_nonmanufacturing_chart.draw(min,max);
+  By_selected_industry_group_Nonfarm_nonmanufacturing_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_selected_industry_group_Nonfarm_nonmanufacturing_chart = new Multi_chart([["data.csv",["By_selected_industry_group_Nonfarm_nonmanufacturing"]]],function(data){return data;},"#By_selected_industry_group_Nonfarm_nonmanufacturing","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By legal form of organization Corporate](#By_legal_form_of_organization_Corporate)
+       </div>
+       <div class="multi_chart" id="By_legal_form_of_organization_Corporate"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_legal_form_of_organization_Corporate_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_legal_form_of_organization_Corporate_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_legal_form_of_organization_Corporate_min").change(function(){
+  var min = $("#By_legal_form_of_organization_Corporate_min").val();
+  var max = $("#By_legal_form_of_organization_Corporate_max").val();
+  By_legal_form_of_organization_Corporate_chart.draw(min,max);
+});
+$("#By_legal_form_of_organization_Corporate_max").change(function(){
+  var min = $("#By_legal_form_of_organization_Corporate_min").val();
+  var max = $("#By_legal_form_of_organization_Corporate_max").val();
+  By_legal_form_of_organization_Corporate_chart.draw(min,max);
+  By_legal_form_of_organization_Corporate_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_legal_form_of_organization_Corporate_chart = new Multi_chart([["data.csv",["By_legal_form_of_organization_Corporate"]]],function(data){return data;},"#By_legal_form_of_organization_Corporate","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By legal form of organization Equipment](#By_legal_form_of_organization_Equipment)
+       </div>
+       <div class="multi_chart" id="By_legal_form_of_organization_Equipment"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_legal_form_of_organization_Equipment_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_legal_form_of_organization_Equipment_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_legal_form_of_organization_Equipment_min").change(function(){
+  var min = $("#By_legal_form_of_organization_Equipment_min").val();
+  var max = $("#By_legal_form_of_organization_Equipment_max").val();
+  By_legal_form_of_organization_Equipment_chart.draw(min,max);
+});
+$("#By_legal_form_of_organization_Equipment_max").change(function(){
+  var min = $("#By_legal_form_of_organization_Equipment_min").val();
+  var max = $("#By_legal_form_of_organization_Equipment_max").val();
+  By_legal_form_of_organization_Equipment_chart.draw(min,max);
+  By_legal_form_of_organization_Equipment_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_legal_form_of_organization_Equipment_chart = new Multi_chart([["data.csv",["By_legal_form_of_organization_Equipment"]]],function(data){return data;},"#By_legal_form_of_organization_Equipment","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By legal form of organization Structures](#By_legal_form_of_organization_Structures)
+       </div>
+       <div class="multi_chart" id="By_legal_form_of_organization_Structures"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_legal_form_of_organization_Structures_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_legal_form_of_organization_Structures_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_legal_form_of_organization_Structures_min").change(function(){
+  var min = $("#By_legal_form_of_organization_Structures_min").val();
+  var max = $("#By_legal_form_of_organization_Structures_max").val();
+  By_legal_form_of_organization_Structures_chart.draw(min,max);
+});
+$("#By_legal_form_of_organization_Structures_max").change(function(){
+  var min = $("#By_legal_form_of_organization_Structures_min").val();
+  var max = $("#By_legal_form_of_organization_Structures_max").val();
+  By_legal_form_of_organization_Structures_chart.draw(min,max);
+  By_legal_form_of_organization_Structures_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_legal_form_of_organization_Structures_chart = new Multi_chart([["data.csv",["By_legal_form_of_organization_Structures"]]],function(data){return data;},"#By_legal_form_of_organization_Structures","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By legal form of organization Intellectual property products](#By_legal_form_of_organization_Intellectual_property_products)
+       </div>
+       <div class="multi_chart" id="By_legal_form_of_organization_Intellectual_property_products"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_legal_form_of_organization_Intellectual_property_products_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_legal_form_of_organization_Intellectual_property_products_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_legal_form_of_organization_Intellectual_property_products_min").change(function(){
+  var min = $("#By_legal_form_of_organization_Intellectual_property_products_min").val();
+  var max = $("#By_legal_form_of_organization_Intellectual_property_products_max").val();
+  By_legal_form_of_organization_Intellectual_property_products_chart.draw(min,max);
+});
+$("#By_legal_form_of_organization_Intellectual_property_products_max").change(function(){
+  var min = $("#By_legal_form_of_organization_Intellectual_property_products_min").val();
+  var max = $("#By_legal_form_of_organization_Intellectual_property_products_max").val();
+  By_legal_form_of_organization_Intellectual_property_products_chart.draw(min,max);
+  By_legal_form_of_organization_Intellectual_property_products_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_legal_form_of_organization_Intellectual_property_products_chart = new Multi_chart([["data.csv",["By_legal_form_of_organization_Intellectual_property_products"]]],function(data){return data;},"#By_legal_form_of_organization_Intellectual_property_products","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By corporate industry group Farms](#By_corporate_industry_group_Farms)
+       </div>
+       <div class="multi_chart" id="By_corporate_industry_group_Farms"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_corporate_industry_group_Farms_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_corporate_industry_group_Farms_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_corporate_industry_group_Farms_min").change(function(){
+  var min = $("#By_corporate_industry_group_Farms_min").val();
+  var max = $("#By_corporate_industry_group_Farms_max").val();
+  By_corporate_industry_group_Farms_chart.draw(min,max);
+});
+$("#By_corporate_industry_group_Farms_max").change(function(){
+  var min = $("#By_corporate_industry_group_Farms_min").val();
+  var max = $("#By_corporate_industry_group_Farms_max").val();
+  By_corporate_industry_group_Farms_chart.draw(min,max);
+  By_corporate_industry_group_Farms_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_corporate_industry_group_Farms_chart = new Multi_chart([["data.csv",["By_corporate_industry_group_Farms"]]],function(data){return data;},"#By_corporate_industry_group_Farms","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By corporate industry group Equipment](#By_corporate_industry_group_Equipment)
+       </div>
+       <div class="multi_chart" id="By_corporate_industry_group_Equipment"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_corporate_industry_group_Equipment_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_corporate_industry_group_Equipment_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_corporate_industry_group_Equipment_min").change(function(){
+  var min = $("#By_corporate_industry_group_Equipment_min").val();
+  var max = $("#By_corporate_industry_group_Equipment_max").val();
+  By_corporate_industry_group_Equipment_chart.draw(min,max);
+});
+$("#By_corporate_industry_group_Equipment_max").change(function(){
+  var min = $("#By_corporate_industry_group_Equipment_min").val();
+  var max = $("#By_corporate_industry_group_Equipment_max").val();
+  By_corporate_industry_group_Equipment_chart.draw(min,max);
+  By_corporate_industry_group_Equipment_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_corporate_industry_group_Equipment_chart = new Multi_chart([["data.csv",["By_corporate_industry_group_Equipment"]]],function(data){return data;},"#By_corporate_industry_group_Equipment","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By corporate industry group Structures](#By_corporate_industry_group_Structures)
+       </div>
+       <div class="multi_chart" id="By_corporate_industry_group_Structures"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_corporate_industry_group_Structures_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_corporate_industry_group_Structures_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_corporate_industry_group_Structures_min").change(function(){
+  var min = $("#By_corporate_industry_group_Structures_min").val();
+  var max = $("#By_corporate_industry_group_Structures_max").val();
+  By_corporate_industry_group_Structures_chart.draw(min,max);
+});
+$("#By_corporate_industry_group_Structures_max").change(function(){
+  var min = $("#By_corporate_industry_group_Structures_min").val();
+  var max = $("#By_corporate_industry_group_Structures_max").val();
+  By_corporate_industry_group_Structures_chart.draw(min,max);
+  By_corporate_industry_group_Structures_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_corporate_industry_group_Structures_chart = new Multi_chart([["data.csv",["By_corporate_industry_group_Structures"]]],function(data){return data;},"#By_corporate_industry_group_Structures","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By corporate industry group Intellectual property products](#By_corporate_industry_group_Intellectual_property_products)
+       </div>
+       <div class="multi_chart" id="By_corporate_industry_group_Intellectual_property_products"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_corporate_industry_group_Intellectual_property_products_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_corporate_industry_group_Intellectual_property_products_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_corporate_industry_group_Intellectual_property_products_min").change(function(){
+  var min = $("#By_corporate_industry_group_Intellectual_property_products_min").val();
+  var max = $("#By_corporate_industry_group_Intellectual_property_products_max").val();
+  By_corporate_industry_group_Intellectual_property_products_chart.draw(min,max);
+});
+$("#By_corporate_industry_group_Intellectual_property_products_max").change(function(){
+  var min = $("#By_corporate_industry_group_Intellectual_property_products_min").val();
+  var max = $("#By_corporate_industry_group_Intellectual_property_products_max").val();
+  By_corporate_industry_group_Intellectual_property_products_chart.draw(min,max);
+  By_corporate_industry_group_Intellectual_property_products_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_corporate_industry_group_Intellectual_property_products_chart = new Multi_chart([["data.csv",["By_corporate_industry_group_Intellectual_property_products"]]],function(data){return data;},"#By_corporate_industry_group_Intellectual_property_products","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By corporate industry group Manufacturing](#By_corporate_industry_group_Manufacturing)
+       </div>
+       <div class="multi_chart" id="By_corporate_industry_group_Manufacturing"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_corporate_industry_group_Manufacturing_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_corporate_industry_group_Manufacturing_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_corporate_industry_group_Manufacturing_min").change(function(){
+  var min = $("#By_corporate_industry_group_Manufacturing_min").val();
+  var max = $("#By_corporate_industry_group_Manufacturing_max").val();
+  By_corporate_industry_group_Manufacturing_chart.draw(min,max);
+});
+$("#By_corporate_industry_group_Manufacturing_max").change(function(){
+  var min = $("#By_corporate_industry_group_Manufacturing_min").val();
+  var max = $("#By_corporate_industry_group_Manufacturing_max").val();
+  By_corporate_industry_group_Manufacturing_chart.draw(min,max);
+  By_corporate_industry_group_Manufacturing_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_corporate_industry_group_Manufacturing_chart = new Multi_chart([["data.csv",["By_corporate_industry_group_Manufacturing"]]],function(data){return data;},"#By_corporate_industry_group_Manufacturing","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By corporate industry group Nonfarm nonmanufacturing](#By_corporate_industry_group_Nonfarm_nonmanufacturing)
+       </div>
+       <div class="multi_chart" id="By_corporate_industry_group_Nonfarm_nonmanufacturing"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_corporate_industry_group_Nonfarm_nonmanufacturing_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_corporate_industry_group_Nonfarm_nonmanufacturing_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_corporate_industry_group_Nonfarm_nonmanufacturing_min").change(function(){
+  var min = $("#By_corporate_industry_group_Nonfarm_nonmanufacturing_min").val();
+  var max = $("#By_corporate_industry_group_Nonfarm_nonmanufacturing_max").val();
+  By_corporate_industry_group_Nonfarm_nonmanufacturing_chart.draw(min,max);
+});
+$("#By_corporate_industry_group_Nonfarm_nonmanufacturing_max").change(function(){
+  var min = $("#By_corporate_industry_group_Nonfarm_nonmanufacturing_min").val();
+  var max = $("#By_corporate_industry_group_Nonfarm_nonmanufacturing_max").val();
+  By_corporate_industry_group_Nonfarm_nonmanufacturing_chart.draw(min,max);
+  By_corporate_industry_group_Nonfarm_nonmanufacturing_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_corporate_industry_group_Nonfarm_nonmanufacturing_chart = new Multi_chart([["data.csv",["By_corporate_industry_group_Nonfarm_nonmanufacturing"]]],function(data){return data;},"#By_corporate_industry_group_Nonfarm_nonmanufacturing","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By corporate financial and nonfinancial Financial](#By_corporate_financial_and_nonfinancial_Financial)
+       </div>
+       <div class="multi_chart" id="By_corporate_financial_and_nonfinancial_Financial"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_corporate_financial_and_nonfinancial_Financial_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_corporate_financial_and_nonfinancial_Financial_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_corporate_financial_and_nonfinancial_Financial_min").change(function(){
+  var min = $("#By_corporate_financial_and_nonfinancial_Financial_min").val();
+  var max = $("#By_corporate_financial_and_nonfinancial_Financial_max").val();
+  By_corporate_financial_and_nonfinancial_Financial_chart.draw(min,max);
+});
+$("#By_corporate_financial_and_nonfinancial_Financial_max").change(function(){
+  var min = $("#By_corporate_financial_and_nonfinancial_Financial_min").val();
+  var max = $("#By_corporate_financial_and_nonfinancial_Financial_max").val();
+  By_corporate_financial_and_nonfinancial_Financial_chart.draw(min,max);
+  By_corporate_financial_and_nonfinancial_Financial_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_corporate_financial_and_nonfinancial_Financial_chart = new Multi_chart([["data.csv",["By_corporate_financial_and_nonfinancial_Financial"]]],function(data){return data;},"#By_corporate_financial_and_nonfinancial_Financial","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By corporate financial and nonfinancial Equipment](#By_corporate_financial_and_nonfinancial_Equipment)
+       </div>
+       <div class="multi_chart" id="By_corporate_financial_and_nonfinancial_Equipment"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_corporate_financial_and_nonfinancial_Equipment_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_corporate_financial_and_nonfinancial_Equipment_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_corporate_financial_and_nonfinancial_Equipment_min").change(function(){
+  var min = $("#By_corporate_financial_and_nonfinancial_Equipment_min").val();
+  var max = $("#By_corporate_financial_and_nonfinancial_Equipment_max").val();
+  By_corporate_financial_and_nonfinancial_Equipment_chart.draw(min,max);
+});
+$("#By_corporate_financial_and_nonfinancial_Equipment_max").change(function(){
+  var min = $("#By_corporate_financial_and_nonfinancial_Equipment_min").val();
+  var max = $("#By_corporate_financial_and_nonfinancial_Equipment_max").val();
+  By_corporate_financial_and_nonfinancial_Equipment_chart.draw(min,max);
+  By_corporate_financial_and_nonfinancial_Equipment_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_corporate_financial_and_nonfinancial_Equipment_chart = new Multi_chart([["data.csv",["By_corporate_financial_and_nonfinancial_Equipment"]]],function(data){return data;},"#By_corporate_financial_and_nonfinancial_Equipment","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By corporate financial and nonfinancial Structures](#By_corporate_financial_and_nonfinancial_Structures)
+       </div>
+       <div class="multi_chart" id="By_corporate_financial_and_nonfinancial_Structures"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_corporate_financial_and_nonfinancial_Structures_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_corporate_financial_and_nonfinancial_Structures_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_corporate_financial_and_nonfinancial_Structures_min").change(function(){
+  var min = $("#By_corporate_financial_and_nonfinancial_Structures_min").val();
+  var max = $("#By_corporate_financial_and_nonfinancial_Structures_max").val();
+  By_corporate_financial_and_nonfinancial_Structures_chart.draw(min,max);
+});
+$("#By_corporate_financial_and_nonfinancial_Structures_max").change(function(){
+  var min = $("#By_corporate_financial_and_nonfinancial_Structures_min").val();
+  var max = $("#By_corporate_financial_and_nonfinancial_Structures_max").val();
+  By_corporate_financial_and_nonfinancial_Structures_chart.draw(min,max);
+  By_corporate_financial_and_nonfinancial_Structures_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_corporate_financial_and_nonfinancial_Structures_chart = new Multi_chart([["data.csv",["By_corporate_financial_and_nonfinancial_Structures"]]],function(data){return data;},"#By_corporate_financial_and_nonfinancial_Structures","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By corporate financial and nonfinancial Intellectual property products](#By_corporate_financial_and_nonfinancial_Intellectual_property_products)
+       </div>
+       <div class="multi_chart" id="By_corporate_financial_and_nonfinancial_Intellectual_property_products"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_corporate_financial_and_nonfinancial_Intellectual_property_products_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_corporate_financial_and_nonfinancial_Intellectual_property_products_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_corporate_financial_and_nonfinancial_Intellectual_property_products_min").change(function(){
+  var min = $("#By_corporate_financial_and_nonfinancial_Intellectual_property_products_min").val();
+  var max = $("#By_corporate_financial_and_nonfinancial_Intellectual_property_products_max").val();
+  By_corporate_financial_and_nonfinancial_Intellectual_property_products_chart.draw(min,max);
+});
+$("#By_corporate_financial_and_nonfinancial_Intellectual_property_products_max").change(function(){
+  var min = $("#By_corporate_financial_and_nonfinancial_Intellectual_property_products_min").val();
+  var max = $("#By_corporate_financial_and_nonfinancial_Intellectual_property_products_max").val();
+  By_corporate_financial_and_nonfinancial_Intellectual_property_products_chart.draw(min,max);
+  By_corporate_financial_and_nonfinancial_Intellectual_property_products_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_corporate_financial_and_nonfinancial_Intellectual_property_products_chart = new Multi_chart([["data.csv",["By_corporate_financial_and_nonfinancial_Intellectual_property_products"]]],function(data){return data;},"#By_corporate_financial_and_nonfinancial_Intellectual_property_products","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By corporate financial and nonfinancial Nonfinancial](#By_corporate_financial_and_nonfinancial_Nonfinancial)
+       </div>
+       <div class="multi_chart" id="By_corporate_financial_and_nonfinancial_Nonfinancial"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_corporate_financial_and_nonfinancial_Nonfinancial_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_corporate_financial_and_nonfinancial_Nonfinancial_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_corporate_financial_and_nonfinancial_Nonfinancial_min").change(function(){
+  var min = $("#By_corporate_financial_and_nonfinancial_Nonfinancial_min").val();
+  var max = $("#By_corporate_financial_and_nonfinancial_Nonfinancial_max").val();
+  By_corporate_financial_and_nonfinancial_Nonfinancial_chart.draw(min,max);
+});
+$("#By_corporate_financial_and_nonfinancial_Nonfinancial_max").change(function(){
+  var min = $("#By_corporate_financial_and_nonfinancial_Nonfinancial_min").val();
+  var max = $("#By_corporate_financial_and_nonfinancial_Nonfinancial_max").val();
+  By_corporate_financial_and_nonfinancial_Nonfinancial_chart.draw(min,max);
+  By_corporate_financial_and_nonfinancial_Nonfinancial_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_corporate_financial_and_nonfinancial_Nonfinancial_chart = new Multi_chart([["data.csv",["By_corporate_financial_and_nonfinancial_Nonfinancial"]]],function(data){return data;},"#By_corporate_financial_and_nonfinancial_Nonfinancial","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By corporate financial and nonfinancial Noncorporate](#By_corporate_financial_and_nonfinancial_Noncorporate)
+       </div>
+       <div class="multi_chart" id="By_corporate_financial_and_nonfinancial_Noncorporate"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_corporate_financial_and_nonfinancial_Noncorporate_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_corporate_financial_and_nonfinancial_Noncorporate_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_corporate_financial_and_nonfinancial_Noncorporate_min").change(function(){
+  var min = $("#By_corporate_financial_and_nonfinancial_Noncorporate_min").val();
+  var max = $("#By_corporate_financial_and_nonfinancial_Noncorporate_max").val();
+  By_corporate_financial_and_nonfinancial_Noncorporate_chart.draw(min,max);
+});
+$("#By_corporate_financial_and_nonfinancial_Noncorporate_max").change(function(){
+  var min = $("#By_corporate_financial_and_nonfinancial_Noncorporate_min").val();
+  var max = $("#By_corporate_financial_and_nonfinancial_Noncorporate_max").val();
+  By_corporate_financial_and_nonfinancial_Noncorporate_chart.draw(min,max);
+  By_corporate_financial_and_nonfinancial_Noncorporate_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_corporate_financial_and_nonfinancial_Noncorporate_chart = new Multi_chart([["data.csv",["By_corporate_financial_and_nonfinancial_Noncorporate"]]],function(data){return data;},"#By_corporate_financial_and_nonfinancial_Noncorporate","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By noncorporate industry group Farms](#By_noncorporate_industry_group_Farms)
+       </div>
+       <div class="multi_chart" id="By_noncorporate_industry_group_Farms"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_noncorporate_industry_group_Farms_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_noncorporate_industry_group_Farms_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_noncorporate_industry_group_Farms_min").change(function(){
+  var min = $("#By_noncorporate_industry_group_Farms_min").val();
+  var max = $("#By_noncorporate_industry_group_Farms_max").val();
+  By_noncorporate_industry_group_Farms_chart.draw(min,max);
+});
+$("#By_noncorporate_industry_group_Farms_max").change(function(){
+  var min = $("#By_noncorporate_industry_group_Farms_min").val();
+  var max = $("#By_noncorporate_industry_group_Farms_max").val();
+  By_noncorporate_industry_group_Farms_chart.draw(min,max);
+  By_noncorporate_industry_group_Farms_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_noncorporate_industry_group_Farms_chart = new Multi_chart([["data.csv",["By_noncorporate_industry_group_Farms"]]],function(data){return data;},"#By_noncorporate_industry_group_Farms","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By noncorporate industry group Equipment](#By_noncorporate_industry_group_Equipment)
+       </div>
+       <div class="multi_chart" id="By_noncorporate_industry_group_Equipment"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_noncorporate_industry_group_Equipment_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_noncorporate_industry_group_Equipment_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_noncorporate_industry_group_Equipment_min").change(function(){
+  var min = $("#By_noncorporate_industry_group_Equipment_min").val();
+  var max = $("#By_noncorporate_industry_group_Equipment_max").val();
+  By_noncorporate_industry_group_Equipment_chart.draw(min,max);
+});
+$("#By_noncorporate_industry_group_Equipment_max").change(function(){
+  var min = $("#By_noncorporate_industry_group_Equipment_min").val();
+  var max = $("#By_noncorporate_industry_group_Equipment_max").val();
+  By_noncorporate_industry_group_Equipment_chart.draw(min,max);
+  By_noncorporate_industry_group_Equipment_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_noncorporate_industry_group_Equipment_chart = new Multi_chart([["data.csv",["By_noncorporate_industry_group_Equipment"]]],function(data){return data;},"#By_noncorporate_industry_group_Equipment","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By noncorporate industry group Structures](#By_noncorporate_industry_group_Structures)
+       </div>
+       <div class="multi_chart" id="By_noncorporate_industry_group_Structures"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_noncorporate_industry_group_Structures_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_noncorporate_industry_group_Structures_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_noncorporate_industry_group_Structures_min").change(function(){
+  var min = $("#By_noncorporate_industry_group_Structures_min").val();
+  var max = $("#By_noncorporate_industry_group_Structures_max").val();
+  By_noncorporate_industry_group_Structures_chart.draw(min,max);
+});
+$("#By_noncorporate_industry_group_Structures_max").change(function(){
+  var min = $("#By_noncorporate_industry_group_Structures_min").val();
+  var max = $("#By_noncorporate_industry_group_Structures_max").val();
+  By_noncorporate_industry_group_Structures_chart.draw(min,max);
+  By_noncorporate_industry_group_Structures_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_noncorporate_industry_group_Structures_chart = new Multi_chart([["data.csv",["By_noncorporate_industry_group_Structures"]]],function(data){return data;},"#By_noncorporate_industry_group_Structures","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By noncorporate industry group Intellectual property products](#By_noncorporate_industry_group_Intellectual_property_products)
+       </div>
+       <div class="multi_chart" id="By_noncorporate_industry_group_Intellectual_property_products"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_noncorporate_industry_group_Intellectual_property_products_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_noncorporate_industry_group_Intellectual_property_products_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_noncorporate_industry_group_Intellectual_property_products_min").change(function(){
+  var min = $("#By_noncorporate_industry_group_Intellectual_property_products_min").val();
+  var max = $("#By_noncorporate_industry_group_Intellectual_property_products_max").val();
+  By_noncorporate_industry_group_Intellectual_property_products_chart.draw(min,max);
+});
+$("#By_noncorporate_industry_group_Intellectual_property_products_max").change(function(){
+  var min = $("#By_noncorporate_industry_group_Intellectual_property_products_min").val();
+  var max = $("#By_noncorporate_industry_group_Intellectual_property_products_max").val();
+  By_noncorporate_industry_group_Intellectual_property_products_chart.draw(min,max);
+  By_noncorporate_industry_group_Intellectual_property_products_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_noncorporate_industry_group_Intellectual_property_products_chart = new Multi_chart([["data.csv",["By_noncorporate_industry_group_Intellectual_property_products"]]],function(data){return data;},"#By_noncorporate_industry_group_Intellectual_property_products","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By noncorporate industry group Manufacturing](#By_noncorporate_industry_group_Manufacturing)
+       </div>
+       <div class="multi_chart" id="By_noncorporate_industry_group_Manufacturing"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_noncorporate_industry_group_Manufacturing_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_noncorporate_industry_group_Manufacturing_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_noncorporate_industry_group_Manufacturing_min").change(function(){
+  var min = $("#By_noncorporate_industry_group_Manufacturing_min").val();
+  var max = $("#By_noncorporate_industry_group_Manufacturing_max").val();
+  By_noncorporate_industry_group_Manufacturing_chart.draw(min,max);
+});
+$("#By_noncorporate_industry_group_Manufacturing_max").change(function(){
+  var min = $("#By_noncorporate_industry_group_Manufacturing_min").val();
+  var max = $("#By_noncorporate_industry_group_Manufacturing_max").val();
+  By_noncorporate_industry_group_Manufacturing_chart.draw(min,max);
+  By_noncorporate_industry_group_Manufacturing_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_noncorporate_industry_group_Manufacturing_chart = new Multi_chart([["data.csv",["By_noncorporate_industry_group_Manufacturing"]]],function(data){return data;},"#By_noncorporate_industry_group_Manufacturing","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By noncorporate industry group Nonfarm nonmanufacturing](#By_noncorporate_industry_group_Nonfarm_nonmanufacturing)
+       </div>
+       <div class="multi_chart" id="By_noncorporate_industry_group_Nonfarm_nonmanufacturing"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_noncorporate_industry_group_Nonfarm_nonmanufacturing_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_noncorporate_industry_group_Nonfarm_nonmanufacturing_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_noncorporate_industry_group_Nonfarm_nonmanufacturing_min").change(function(){
+  var min = $("#By_noncorporate_industry_group_Nonfarm_nonmanufacturing_min").val();
+  var max = $("#By_noncorporate_industry_group_Nonfarm_nonmanufacturing_max").val();
+  By_noncorporate_industry_group_Nonfarm_nonmanufacturing_chart.draw(min,max);
+});
+$("#By_noncorporate_industry_group_Nonfarm_nonmanufacturing_max").change(function(){
+  var min = $("#By_noncorporate_industry_group_Nonfarm_nonmanufacturing_min").val();
+  var max = $("#By_noncorporate_industry_group_Nonfarm_nonmanufacturing_max").val();
+  By_noncorporate_industry_group_Nonfarm_nonmanufacturing_chart.draw(min,max);
+  By_noncorporate_industry_group_Nonfarm_nonmanufacturing_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_noncorporate_industry_group_Nonfarm_nonmanufacturing_chart = new Multi_chart([["data.csv",["By_noncorporate_industry_group_Nonfarm_nonmanufacturing"]]],function(data){return data;},"#By_noncorporate_industry_group_Nonfarm_nonmanufacturing","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By noncorporate legal form of organization Sole proprietorships](#By_noncorporate_legal_form_of_organization_Sole_proprietorships)
+       </div>
+       <div class="multi_chart" id="By_noncorporate_legal_form_of_organization_Sole_proprietorships"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Sole_proprietorships_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Sole_proprietorships_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_noncorporate_legal_form_of_organization_Sole_proprietorships_min").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Sole_proprietorships_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Sole_proprietorships_max").val();
+  By_noncorporate_legal_form_of_organization_Sole_proprietorships_chart.draw(min,max);
+});
+$("#By_noncorporate_legal_form_of_organization_Sole_proprietorships_max").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Sole_proprietorships_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Sole_proprietorships_max").val();
+  By_noncorporate_legal_form_of_organization_Sole_proprietorships_chart.draw(min,max);
+  By_noncorporate_legal_form_of_organization_Sole_proprietorships_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_noncorporate_legal_form_of_organization_Sole_proprietorships_chart = new Multi_chart([["data.csv",["By_noncorporate_legal_form_of_organization_Sole_proprietorships"]]],function(data){return data;},"#By_noncorporate_legal_form_of_organization_Sole_proprietorships","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By noncorporate legal form of organization Equipment](#By_noncorporate_legal_form_of_organization_Equipment)
+       </div>
+       <div class="multi_chart" id="By_noncorporate_legal_form_of_organization_Equipment"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Equipment_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Equipment_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_noncorporate_legal_form_of_organization_Equipment_min").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Equipment_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Equipment_max").val();
+  By_noncorporate_legal_form_of_organization_Equipment_chart.draw(min,max);
+});
+$("#By_noncorporate_legal_form_of_organization_Equipment_max").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Equipment_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Equipment_max").val();
+  By_noncorporate_legal_form_of_organization_Equipment_chart.draw(min,max);
+  By_noncorporate_legal_form_of_organization_Equipment_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_noncorporate_legal_form_of_organization_Equipment_chart = new Multi_chart([["data.csv",["By_noncorporate_legal_form_of_organization_Equipment"]]],function(data){return data;},"#By_noncorporate_legal_form_of_organization_Equipment","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By noncorporate legal form of organization Structures](#By_noncorporate_legal_form_of_organization_Structures)
+       </div>
+       <div class="multi_chart" id="By_noncorporate_legal_form_of_organization_Structures"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Structures_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Structures_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_noncorporate_legal_form_of_organization_Structures_min").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Structures_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Structures_max").val();
+  By_noncorporate_legal_form_of_organization_Structures_chart.draw(min,max);
+});
+$("#By_noncorporate_legal_form_of_organization_Structures_max").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Structures_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Structures_max").val();
+  By_noncorporate_legal_form_of_organization_Structures_chart.draw(min,max);
+  By_noncorporate_legal_form_of_organization_Structures_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_noncorporate_legal_form_of_organization_Structures_chart = new Multi_chart([["data.csv",["By_noncorporate_legal_form_of_organization_Structures"]]],function(data){return data;},"#By_noncorporate_legal_form_of_organization_Structures","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By noncorporate legal form of organization Intellectual property products](#By_noncorporate_legal_form_of_organization_Intellectual_property_products)
+       </div>
+       <div class="multi_chart" id="By_noncorporate_legal_form_of_organization_Intellectual_property_products"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Intellectual_property_products_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Intellectual_property_products_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_noncorporate_legal_form_of_organization_Intellectual_property_products_min").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Intellectual_property_products_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Intellectual_property_products_max").val();
+  By_noncorporate_legal_form_of_organization_Intellectual_property_products_chart.draw(min,max);
+});
+$("#By_noncorporate_legal_form_of_organization_Intellectual_property_products_max").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Intellectual_property_products_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Intellectual_property_products_max").val();
+  By_noncorporate_legal_form_of_organization_Intellectual_property_products_chart.draw(min,max);
+  By_noncorporate_legal_form_of_organization_Intellectual_property_products_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_noncorporate_legal_form_of_organization_Intellectual_property_products_chart = new Multi_chart([["data.csv",["By_noncorporate_legal_form_of_organization_Intellectual_property_products"]]],function(data){return data;},"#By_noncorporate_legal_form_of_organization_Intellectual_property_products","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By noncorporate legal form of organization Partnerships](#By_noncorporate_legal_form_of_organization_Partnerships)
+       </div>
+       <div class="multi_chart" id="By_noncorporate_legal_form_of_organization_Partnerships"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Partnerships_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Partnerships_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_noncorporate_legal_form_of_organization_Partnerships_min").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Partnerships_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Partnerships_max").val();
+  By_noncorporate_legal_form_of_organization_Partnerships_chart.draw(min,max);
+});
+$("#By_noncorporate_legal_form_of_organization_Partnerships_max").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Partnerships_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Partnerships_max").val();
+  By_noncorporate_legal_form_of_organization_Partnerships_chart.draw(min,max);
+  By_noncorporate_legal_form_of_organization_Partnerships_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_noncorporate_legal_form_of_organization_Partnerships_chart = new Multi_chart([["data.csv",["By_noncorporate_legal_form_of_organization_Partnerships"]]],function(data){return data;},"#By_noncorporate_legal_form_of_organization_Partnerships","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By noncorporate legal form of organization Nonprofit institutions](#By_noncorporate_legal_form_of_organization_Nonprofit_institutions)
+       </div>
+       <div class="multi_chart" id="By_noncorporate_legal_form_of_organization_Nonprofit_institutions"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Nonprofit_institutions_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Nonprofit_institutions_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_noncorporate_legal_form_of_organization_Nonprofit_institutions_min").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Nonprofit_institutions_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Nonprofit_institutions_max").val();
+  By_noncorporate_legal_form_of_organization_Nonprofit_institutions_chart.draw(min,max);
+});
+$("#By_noncorporate_legal_form_of_organization_Nonprofit_institutions_max").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Nonprofit_institutions_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Nonprofit_institutions_max").val();
+  By_noncorporate_legal_form_of_organization_Nonprofit_institutions_chart.draw(min,max);
+  By_noncorporate_legal_form_of_organization_Nonprofit_institutions_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_noncorporate_legal_form_of_organization_Nonprofit_institutions_chart = new Multi_chart([["data.csv",["By_noncorporate_legal_form_of_organization_Nonprofit_institutions"]]],function(data){return data;},"#By_noncorporate_legal_form_of_organization_Nonprofit_institutions","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By noncorporate legal form of organization Households](#By_noncorporate_legal_form_of_organization_Households)
+       </div>
+       <div class="multi_chart" id="By_noncorporate_legal_form_of_organization_Households"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Households_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Households_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_noncorporate_legal_form_of_organization_Households_min").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Households_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Households_max").val();
+  By_noncorporate_legal_form_of_organization_Households_chart.draw(min,max);
+});
+$("#By_noncorporate_legal_form_of_organization_Households_max").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Households_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Households_max").val();
+  By_noncorporate_legal_form_of_organization_Households_chart.draw(min,max);
+  By_noncorporate_legal_form_of_organization_Households_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_noncorporate_legal_form_of_organization_Households_chart = new Multi_chart([["data.csv",["By_noncorporate_legal_form_of_organization_Households"]]],function(data){return data;},"#By_noncorporate_legal_form_of_organization_Households","billions");
+```
+       </div>
+       <div class="markdown"> 
+# [By noncorporate legal form of organization Tax exempt cooperatives](#By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives)
+       </div>
+       <div class="multi_chart" id="By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives"></div>
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives_min" name="min_year" value="1925" min="1925" max="2014">
+          maximum year:
+         <input type="number" id="By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives_max" name="max_year" value="2014" min="1925" max="2014">
+       </form>
+
+<script>
+$("#By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives_min").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives_max").val();
+  By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives_chart.draw(min,max);
+});
+$("#By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives_max").change(function(){
+  var min = $("#By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives_min").val();
+  var max = $("#By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives_max").val();
+  By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives_chart.draw(min,max);
+  By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives_chart.draw(min,max);
+});
+</script>
+       <div class="markdown"> 
+```javascript
+var By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives_chart = new Multi_chart([["data.csv",["By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives"]]],function(data){return data;},"#By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives","billions");
+```
+       </div>
+       <div class="markdown"> 
+```data
+year,Private_nonresidential_fixed_assets,Equipment,Structures,Intellectual_property_products,By_selected_industry_group_Farms,By_selected_industry_group_Equipment,By_selected_industry_group_Structures,By_selected_industry_group_Intellectual_property_products,By_selected_industry_group_Manufacturing,By_selected_industry_group_Nonfarm_nonmanufacturing,By_legal_form_of_organization_Corporate,By_legal_form_of_organization_Equipment,By_legal_form_of_organization_Structures,By_legal_form_of_organization_Intellectual_property_products,By_corporate_industry_group_Farms,By_corporate_industry_group_Equipment,By_corporate_industry_group_Structures,By_corporate_industry_group_Intellectual_property_products,By_corporate_industry_group_Manufacturing,By_corporate_industry_group_Nonfarm_nonmanufacturing,By_corporate_financial_and_nonfinancial_Financial,By_corporate_financial_and_nonfinancial_Equipment,By_corporate_financial_and_nonfinancial_Structures,By_corporate_financial_and_nonfinancial_Intellectual_property_products,By_corporate_financial_and_nonfinancial_Nonfinancial,By_corporate_financial_and_nonfinancial_Noncorporate,By_noncorporate_industry_group_Farms,By_noncorporate_industry_group_Equipment,By_noncorporate_industry_group_Structures,By_noncorporate_industry_group_Intellectual_property_products,By_noncorporate_industry_group_Manufacturing,By_noncorporate_industry_group_Nonfarm_nonmanufacturing,By_noncorporate_legal_form_of_organization_Sole_proprietorships,By_noncorporate_legal_form_of_organization_Equipment,By_noncorporate_legal_form_of_organization_Structures,By_noncorporate_legal_form_of_organization_Intellectual_property_products,By_noncorporate_legal_form_of_organization_Partnerships,By_noncorporate_legal_form_of_organization_Nonprofit_institutions,By_noncorporate_legal_form_of_organization_Households,By_noncorporate_legal_form_of_organization_Tax_exempt_cooperatives
+1925,5.9,4.2,1.4,0.3,0.6,3.0,1.2,0.2,1.1,4.3,4.2,2.8,1.1,0.2,0.0,2.1,1.0,0.1,1.0,3.1,0.2,1.4,0.3,0.1,4.0,1.8,0.5,0.9,0.2,0.1,0.1,1.2,1.1,0.0,0.0,0.0,0.6,0.1,0.0,0.0
+1926,6.3,4.5,1.5,0.3,0.6,3.2,1.2,0.2,1.1,4.6,4.4,3.0,1.2,0.2,0.0,2.2,1.0,0.1,1.1,3.3,0.2,1.5,0.3,0.1,4.2,1.9,0.6,1.0,0.2,0.1,0.1,1.3,1.2,0.0,0.0,0.0,0.6,0.1,0.0,0.0
+1927,6.5,4.5,1.6,0.3,0.6,3.2,1.3,0.2,1.2,4.7,4.4,3.0,1.3,0.2,0.0,2.1,1.1,0.1,1.1,3.3,0.2,1.6,0.3,0.1,4.2,2.0,0.6,1.0,0.2,0.1,0.1,1.4,1.3,0.0,0.0,0.0,0.6,0.1,0.0,0.0
+1928,6.6,4.6,1.7,0.3,0.6,3.2,1.4,0.2,1.2,4.8,4.5,3.0,1.4,0.2,0.0,2.1,1.1,0.1,1.1,3.4,0.2,1.6,0.4,0.1,4.3,2.1,0.6,1.1,0.3,0.1,0.1,1.4,1.3,0.0,0.0,0.0,0.7,0.1,0.0,0.0
+1929,6.9,4.7,1.8,0.3,0.7,3.2,1.5,0.2,1.2,5.0,4.7,3.0,1.4,0.2,0.0,2.2,1.2,0.1,1.2,3.5,0.2,1.7,0.4,0.1,4.4,2.2,0.6,1.1,0.3,0.1,0.1,1.5,1.4,0.0,0.0,0.0,0.7,0.1,0.0,0.0
+1930,7.0,4.7,1.9,0.4,0.7,3.2,1.5,0.3,1.3,5.0,4.7,3.0,1.5,0.3,0.0,2.1,1.2,0.1,1.2,3.5,0.2,1.7,0.4,0.1,4.5,2.3,0.7,1.1,0.3,0.1,0.1,1.5,1.4,0.0,0.0,0.0,0.7,0.2,0.0,0.0
+1931,6.9,4.5,2.0,0.4,0.7,3.1,1.6,0.3,1.3,4.9,4.7,2.9,1.5,0.3,0.0,2.0,1.3,0.2,1.2,3.5,0.2,1.6,0.4,0.1,4.5,2.2,0.6,1.0,0.3,0.1,0.1,1.5,1.4,0.0,0.0,0.0,0.7,0.2,0.0,0.0
+1932,6.6,4.2,2.0,0.4,0.6,2.8,1.6,0.3,1.2,4.7,4.5,2.7,1.5,0.3,0.0,1.9,1.3,0.2,1.2,3.3,0.2,1.5,0.4,0.1,4.3,2.1,0.6,1.0,0.3,0.1,0.1,1.4,1.3,0.0,0.0,0.0,0.6,0.2,0.0,0.0
+1933,6.2,3.9,1.9,0.4,0.6,2.6,1.6,0.3,1.2,4.5,4.3,2.5,1.5,0.3,0.0,1.7,1.3,0.2,1.1,3.2,0.2,1.4,0.4,0.1,4.1,1.9,0.6,0.9,0.3,0.1,0.1,1.3,1.2,0.0,0.0,0.0,0.6,0.2,0.0,0.0
+1934,6.0,3.6,1.9,0.4,0.5,2.4,1.6,0.3,1.2,4.3,4.2,2.4,1.5,0.3,0.0,1.6,1.2,0.2,1.1,3.0,0.2,1.3,0.4,0.1,4.0,1.8,0.5,0.8,0.3,0.1,0.1,1.2,1.1,0.0,0.0,0.0,0.6,0.2,0.0,0.0
+1935,5.9,3.6,1.9,0.4,0.5,2.3,1.6,0.3,1.2,4.2,4.1,2.3,1.5,0.3,0.0,1.6,1.2,0.2,1.1,3.0,0.2,1.2,0.4,0.1,3.9,1.8,0.5,0.8,0.3,0.1,0.1,1.2,1.0,0.0,0.0,0.0,0.6,0.2,0.0,0.0
+1936,5.9,3.6,1.9,0.4,0.5,2.3,1.6,0.3,1.2,4.2,4.1,2.3,1.5,0.3,0.0,1.6,1.2,0.2,1.2,3.0,0.2,1.2,0.4,0.1,4.0,1.8,0.5,0.8,0.3,0.1,0.1,1.2,1.0,0.0,0.0,0.0,0.6,0.2,0.0,0.0
+1937,6.1,3.7,1.9,0.5,0.6,2.4,1.6,0.3,1.3,4.3,4.3,2.4,1.5,0.3,0.0,1.6,1.3,0.2,1.2,3.0,0.2,1.3,0.4,0.1,4.1,1.9,0.6,0.8,0.3,0.1,0.1,1.2,1.1,0.0,0.0,0.0,0.6,0.2,0.0,0.0
+1938,6.2,3.8,1.9,0.5,0.6,2.4,1.6,0.3,1.4,4.3,4.3,2.5,1.5,0.4,0.0,1.6,1.3,0.2,1.3,3.0,0.2,1.3,0.4,0.1,4.2,1.9,0.6,0.8,0.3,0.1,0.1,1.2,1.1,0.0,0.0,0.0,0.6,0.2,0.0,0.0
+1939,6.3,3.8,2.0,0.5,0.6,2.3,1.6,0.3,1.4,4.3,4.4,2.5,1.5,0.4,0.0,1.6,1.3,0.2,1.3,3.0,0.2,1.3,0.4,0.2,4.2,1.9,0.6,0.8,0.3,0.1,0.1,1.3,1.1,0.0,0.0,0.0,0.6,0.2,0.0,0.0
+1940,6.5,3.9,2.0,0.6,0.6,2.4,1.6,0.4,1.5,4.4,4.5,2.6,1.5,0.4,0.0,1.6,1.3,0.2,1.4,3.1,0.2,1.4,0.4,0.2,4.3,2.0,0.6,0.8,0.3,0.2,0.1,1.3,1.1,0.0,0.0,0.0,0.6,0.2,0.0,0.0
+1941,6.8,4.2,2.0,0.6,0.6,2.5,1.6,0.4,1.6,4.6,4.7,2.7,1.6,0.5,0.0,1.7,1.3,0.2,1.5,3.2,0.2,1.5,0.4,0.2,4.6,2.1,0.6,0.9,0.3,0.2,0.1,1.4,1.2,0.0,0.0,0.0,0.6,0.2,0.0,0.1
+1942,7.1,4.3,2.0,0.7,0.7,2.6,1.7,0.4,1.8,4.6,4.9,2.8,1.6,0.5,0.0,1.7,1.3,0.2,1.7,3.3,0.2,1.5,0.4,0.2,4.7,2.1,0.7,0.9,0.3,0.2,0.1,1.4,1.2,0.0,0.0,0.0,0.7,0.2,0.0,0.1
+1943,7.0,4.2,2.0,0.8,0.7,2.4,1.7,0.4,1.8,4.6,5.0,2.8,1.6,0.6,0.0,1.6,1.3,0.3,1.7,3.2,0.2,1.4,0.4,0.2,4.8,2.1,0.6,0.8,0.3,0.2,0.1,1.3,1.2,0.0,0.0,0.0,0.6,0.2,0.0,0.1
+1944,7.1,4.3,2.0,0.8,0.7,2.4,1.7,0.5,1.9,4.6,5.1,2.8,1.6,0.6,0.0,1.6,1.3,0.3,1.8,3.2,0.2,1.4,0.4,0.2,4.9,2.1,0.7,0.8,0.3,0.2,0.1,1.3,1.2,0.0,0.0,0.0,0.7,0.2,0.0,0.1
+1945,7.5,4.5,2.1,0.9,0.7,2.5,1.7,0.5,2.1,4.7,5.3,3.0,1.6,0.7,0.0,1.7,1.4,0.3,1.9,3.4,0.2,1.5,0.4,0.2,5.2,2.2,0.7,0.8,0.3,0.2,0.1,1.4,1.2,0.0,0.0,0.0,0.7,0.2,0.0,0.1
+1946,8.3,5.2,2.1,1.0,0.8,2.9,1.7,0.6,2.3,5.2,5.9,3.5,1.7,0.8,0.0,1.9,1.4,0.4,2.2,3.7,0.2,1.7,0.5,0.2,5.7,2.4,0.8,1.0,0.3,0.2,0.1,1.5,1.3,0.1,0.0,0.0,0.8,0.2,0.0,0.1
+1947,9.8,6.3,2.3,1.1,0.9,3.6,1.8,0.7,2.8,6.1,6.9,4.2,1.8,0.9,0.0,2.4,1.5,0.4,2.6,4.2,0.2,2.1,0.5,0.3,6.6,2.9,0.9,1.2,0.4,0.3,0.2,1.9,1.6,0.1,0.0,0.0,0.9,0.3,0.0,0.1
+1948,11.4,7.7,2.5,1.3,1.1,4.4,2.0,0.7,3.2,7.1,7.9,5.0,1.9,1.0,0.0,2.8,1.6,0.4,3.1,4.8,0.3,2.7,0.5,0.3,7.7,3.5,1.1,1.6,0.4,0.3,0.2,2.2,2.0,0.1,0.0,0.0,1.1,0.3,0.0,0.1
+1949,12.9,8.9,2.6,1.4,1.4,5.1,2.1,0.8,3.6,8.0,8.8,5.7,2.0,1.1,0.0,3.3,1.7,0.5,3.4,5.4,0.3,3.2,0.6,0.3,8.5,4.1,1.3,1.8,0.4,0.3,0.2,2.6,2.4,0.1,0.0,0.0,1.3,0.3,0.0,0.1
+1950,14.4,10.0,2.8,1.5,1.6,5.8,2.3,0.8,3.8,8.9,9.6,6.3,2.2,1.2,0.0,3.7,1.8,0.5,3.6,6.0,0.3,3.7,0.6,0.3,9.3,4.7,1.6,2.1,0.5,0.3,0.2,2.9,2.7,0.1,0.0,0.0,1.4,0.4,0.0,0.1
+1951,15.8,11.1,3.1,1.6,1.8,6.6,2.5,0.9,4.2,9.9,10.6,6.9,2.4,1.3,0.0,4.1,1.9,0.5,3.9,6.6,0.4,4.2,0.7,0.4,10.2,5.3,1.8,2.4,0.5,0.3,0.2,3.3,3.0,0.1,0.0,0.0,1.6,0.4,0.0,0.2
+1952,17.2,12.1,3.3,1.8,1.9,7.1,2.7,0.9,4.6,10.7,11.6,7.6,2.6,1.4,0.0,4.5,2.1,0.6,4.4,7.1,0.4,4.5,0.8,0.4,11.2,5.7,1.9,2.6,0.6,0.4,0.2,3.5,3.2,0.1,0.0,0.0,1.7,0.5,0.0,0.2
+1953,18.8,13.1,3.6,2.1,2.1,7.8,2.9,1.0,5.1,11.6,12.8,8.3,2.8,1.7,0.0,5.0,2.3,0.6,4.9,7.8,0.4,4.8,0.8,0.4,12.3,6.1,2.0,2.8,0.6,0.4,0.3,3.8,3.4,0.2,0.0,0.0,1.8,0.6,0.0,0.2
+1954,20.4,14.2,3.9,2.4,2.2,8.4,3.1,1.1,5.6,12.6,14.0,9.0,3.0,2.0,0.1,5.4,2.4,0.7,5.4,8.6,0.5,5.1,0.9,0.4,13.5,6.5,2.1,3.0,0.7,0.4,0.3,4.1,3.6,0.2,0.0,0.0,2.0,0.6,0.0,0.2
+1955,22.1,15.2,4.2,2.7,2.2,9.2,3.4,1.2,6.1,13.7,15.2,9.8,3.2,2.2,0.1,5.9,2.6,0.7,5.9,9.3,0.6,5.4,1.0,0.5,14.7,6.9,2.2,3.2,0.7,0.4,0.3,4.4,3.8,0.2,0.0,0.0,2.1,0.7,0.0,0.2
+1956,24.0,16.3,4.6,3.1,2.3,10.0,3.7,1.3,6.8,14.9,16.7,10.6,3.5,2.5,0.1,6.5,2.9,0.8,6.5,10.1,0.6,5.7,1.1,0.5,16.1,7.3,2.2,3.5,0.8,0.5,0.3,4.8,4.0,0.2,0.0,0.0,2.2,0.8,0.1,0.2
+1957,26.0,17.6,5.0,3.5,2.3,10.8,4.0,1.4,7.6,16.2,18.4,11.6,3.8,2.9,0.1,7.1,3.1,0.9,7.2,11.1,0.7,6.0,1.1,0.6,17.7,7.7,2.2,3.7,0.9,0.5,0.3,5.1,4.2,0.2,0.0,0.0,2.3,0.8,0.1,0.2
+1958,28.4,19.2,5.3,3.9,2.4,11.8,4.3,1.5,8.3,17.6,20.2,12.8,4.1,3.3,0.1,7.9,3.3,1.0,8.0,12.2,0.8,6.3,1.2,0.6,19.5,8.2,2.4,4.0,1.0,0.5,0.4,5.5,4.5,0.2,0.0,0.0,2.5,0.9,0.1,0.2
+1959,30.0,19.9,5.7,4.4,2.5,12.4,4.6,1.6,8.8,18.6,21.5,13.4,4.4,3.7,0.1,8.3,3.5,1.1,8.5,12.9,0.8,6.5,1.3,0.7,20.7,8.5,2.4,4.1,1.1,0.6,0.4,5.7,4.6,0.2,0.0,0.0,2.6,1.0,0.1,0.2
+1960,31.3,20.4,6.0,4.9,2.5,12.8,4.9,1.8,9.3,19.5,22.6,13.9,4.6,4.1,0.1,8.7,3.7,1.1,8.9,13.6,0.8,6.5,1.4,0.7,21.8,8.7,2.4,4.1,1.1,0.6,0.4,5.9,4.6,0.2,0.0,0.0,2.6,1.1,0.1,0.2
+1961,33.1,21.3,6.4,5.4,2.6,13.5,5.2,2.0,9.9,20.6,24.1,14.7,4.9,4.6,0.1,9.3,3.9,1.3,9.5,14.5,0.9,6.7,1.6,0.8,23.2,9.0,2.5,4.2,1.2,0.7,0.4,6.1,4.7,0.2,0.1,0.0,2.7,1.2,0.1,0.3
+1962,35.1,22.4,6.8,5.9,2.6,14.2,5.5,2.1,10.6,21.9,25.7,15.6,5.1,5.0,0.1,9.9,4.2,1.4,10.2,15.4,0.9,6.8,1.7,0.9,24.8,9.3,2.5,4.3,1.3,0.8,0.4,6.4,4.9,0.2,0.1,0.0,2.8,1.3,0.1,0.3
+1963,37.3,23.7,7.2,6.5,2.7,15.2,5.8,2.3,11.3,23.3,27.6,16.7,5.4,5.5,0.1,10.7,4.4,1.5,10.9,16.6,1.0,7.1,1.8,0.9,26.6,9.8,2.6,4.5,1.5,0.8,0.4,6.8,5.0,0.2,0.1,0.0,2.9,1.5,0.1,0.3
+1964,39.9,25.2,7.6,7.1,2.9,16.2,6.1,2.5,12.1,24.9,29.6,17.9,5.6,6.1,0.1,11.6,4.6,1.6,11.7,17.8,1.1,7.4,1.9,1.0,28.5,10.3,2.7,4.7,1.6,0.9,0.4,7.1,5.2,0.2,0.1,0.0,3.1,1.6,0.1,0.3
+1965,43.2,27.5,8.1,7.7,3.1,17.7,6.5,2.8,13.2,26.9,32.3,19.6,6.0,6.7,0.2,12.7,4.8,1.8,12.8,19.3,1.2,7.8,2.1,1.0,31.0,11.0,2.9,5.0,1.7,0.9,0.4,7.6,5.5,0.2,0.1,0.0,3.3,1.8,0.1,0.3
+1966,47.3,30.2,8.6,8.5,3.3,19.4,6.9,3.1,14.7,29.4,35.6,21.8,6.4,7.4,0.2,14.1,5.1,2.0,14.2,21.2,1.4,8.4,2.3,1.1,34.2,11.8,3.1,5.3,1.9,1.0,0.4,8.2,5.9,0.2,0.1,0.0,3.5,1.9,0.1,0.3
+1967,51.6,32.9,9.2,9.5,3.6,21.0,7.4,3.4,16.2,31.8,39.1,24.0,6.8,8.3,0.2,15.4,5.4,2.3,15.8,23.1,1.6,8.9,2.4,1.2,37.5,12.5,3.4,5.6,2.0,1.1,0.5,8.7,6.2,0.2,0.1,0.0,3.8,2.1,0.1,0.3
+1968,56.0,35.7,9.8,10.5,3.8,22.9,7.8,3.8,17.8,34.5,42.8,26.3,7.2,9.3,0.2,16.9,5.7,2.6,17.3,25.2,1.8,9.4,2.6,1.3,41.0,13.2,3.5,5.9,2.1,1.2,0.5,9.2,6.5,0.2,0.1,0.0,4.0,2.3,0.1,0.3
+1969,61.1,38.9,10.4,11.7,3.9,25.2,8.3,4.2,19.5,37.7,47.0,29.0,7.7,10.4,0.2,18.8,6.0,3.0,19.0,27.8,2.1,10.0,2.7,1.4,45.0,14.1,3.7,6.4,2.3,1.2,0.5,9.9,6.9,0.2,0.1,0.0,4.2,2.5,0.1,0.3
+1970,66.2,42.0,11.1,13.0,4.1,27.4,8.9,4.7,21.1,40.9,51.2,31.5,8.2,11.5,0.3,20.6,6.4,3.4,20.6,30.3,2.3,10.6,2.9,1.5,48.9,15.0,3.9,6.8,2.4,1.3,0.5,10.6,7.3,0.3,0.1,0.0,4.5,2.7,0.1,0.4
+1971,71.2,45.1,11.9,14.2,4.3,29.6,9.4,5.2,22.7,44.2,55.3,33.9,8.8,12.6,0.3,22.3,6.8,3.7,22.2,32.8,2.7,11.2,3.1,1.6,52.6,15.9,4.0,7.3,2.6,1.5,0.5,11.4,7.7,0.3,0.1,0.0,4.8,2.9,0.1,0.4
+1972,77.1,49.1,12.7,15.3,4.6,32.4,10.1,5.6,24.4,48.1,60.0,37.0,9.3,13.6,0.3,24.6,7.3,4.1,23.8,35.9,3.0,12.1,3.3,1.7,57.0,17.1,4.3,7.9,2.8,1.5,0.5,12.2,8.2,0.3,0.1,0.0,5.1,3.2,0.2,0.4
+1973,85.2,54.3,14.2,16.7,5.0,36.1,11.5,6.1,26.4,53.7,66.6,41.1,10.6,14.9,0.3,27.5,8.4,4.5,25.9,40.4,3.5,13.2,3.7,1.8,63.1,18.6,4.7,8.6,3.1,1.6,0.6,13.4,8.9,0.3,0.1,0.0,5.5,3.6,0.2,0.4
+1974,93.8,60.1,15.4,18.3,5.5,40.1,12.4,6.6,29.1,59.2,73.6,45.7,11.4,16.5,0.4,30.8,9.0,4.9,28.5,44.7,4.1,14.4,3.9,1.9,69.4,20.2,5.2,9.4,3.4,1.7,0.6,14.4,9.6,0.3,0.1,0.0,5.8,4.1,0.2,0.4
+1975,102.4,65.7,16.6,20.1,6.1,43.6,13.4,7.3,32.1,64.2,80.7,50.2,12.4,18.2,0.4,33.6,9.8,5.5,31.4,48.9,4.9,15.5,4.2,2.0,75.8,21.7,5.7,10.0,3.6,1.8,0.6,15.4,10.3,0.3,0.1,0.0,6.2,4.6,0.2,0.5
+1976,112.3,72.2,18.0,22.2,6.9,47.7,14.4,8.1,35.2,70.2,88.8,55.3,13.4,20.0,0.5,37.0,10.6,6.1,34.5,53.7,5.8,16.8,4.5,2.1,83.0,23.5,6.3,10.7,3.8,1.9,0.7,16.4,11.1,0.4,0.1,0.0,6.5,5.1,0.2,0.5
+1977,125.0,81.0,19.5,24.5,7.7,53.6,15.7,9.1,39.0,78.3,99.3,62.4,14.6,22.2,0.6,41.9,11.6,7.0,38.2,60.5,6.8,18.5,4.9,2.3,92.5,25.7,7.1,11.7,4.1,2.1,0.7,17.9,12.2,0.4,0.2,0.0,7.0,5.6,0.2,0.6
+1978,140.8,92.1,21.5,27.2,8.5,61.4,17.3,10.3,43.3,89.0,112.4,71.5,16.1,24.7,0.7,48.4,12.8,8.0,42.5,69.2,8.0,20.6,5.4,2.5,104.3,28.4,7.8,13.0,4.5,2.3,0.8,19.8,13.6,0.5,0.2,0.0,7.7,6.2,0.2,0.7
+1979,160.3,105.5,24.1,30.7,9.5,71.0,19.5,12.0,48.3,102.5,128.2,82.3,18.1,27.8,0.8,56.3,14.5,9.3,47.3,80.1,9.5,23.2,6.0,2.9,118.7,32.1,8.7,14.7,5.0,2.6,1.0,22.4,15.5,0.5,0.2,0.0,8.8,6.9,0.2,0.7
+1980,181.5,119.1,27.4,35.0,10.3,80.7,22.4,13.9,54.2,117.0,145.7,93.5,20.6,31.6,0.9,64.3,16.7,10.8,53.1,91.8,11.4,25.6,6.8,3.4,134.4,35.8,9.5,16.4,5.7,3.1,1.1,25.2,17.3,0.6,0.2,0.0,9.9,7.6,0.2,0.8
+1981,205.0,133.1,31.8,40.1,10.9,90.4,26.3,16.1,61.2,132.8,165.2,105.2,23.9,36.1,0.9,72.3,19.5,12.5,60.0,104.3,13.5,27.9,7.9,4.0,151.7,39.8,10.0,18.2,6.8,3.6,1.2,28.6,19.0,0.6,0.2,0.0,11.4,8.3,0.2,0.9
+1982,231.4,148.7,36.8,45.9,11.4,101.9,30.9,19.0,68.4,151.7,187.1,118.3,27.5,41.4,1.0,81.5,22.7,14.9,67.0,119.1,16.0,30.5,9.3,4.5,171.1,44.3,10.4,20.3,8.1,4.1,1.3,32.6,20.9,0.6,0.2,0.0,13.1,9.1,0.2,0.9
+1983,255.1,161.8,41.2,52.2,11.4,112.7,34.8,22.3,73.9,169.8,207.3,129.5,30.7,47.2,1.0,90.5,25.6,17.8,72.4,133.9,18.8,32.3,10.5,5.0,188.5,47.8,10.4,22.1,9.2,4.6,1.4,36.0,22.2,0.6,0.2,0.0,14.3,10.1,0.3,0.9
+1984,281.2,176.5,45.0,59.7,11.4,125.1,38.3,26.2,80.1,189.7,229.9,142.2,33.6,54.1,1.0,100.9,28.2,21.1,78.6,150.3,22.2,34.3,11.4,5.6,207.7,51.3,10.4,24.1,10.1,5.1,1.5,39.4,23.4,0.6,0.2,0.0,15.6,11.1,0.3,0.9
+1985,312.4,194.9,49.2,68.3,11.5,139.7,42.2,30.5,88.4,212.4,256.7,157.9,36.9,62.0,1.0,113.0,31.2,24.8,86.8,168.9,26.2,37.0,12.3,6.3,230.6,55.7,10.5,26.7,11.1,5.8,1.7,43.5,25.0,0.7,0.2,0.1,17.2,12.1,0.4,1.0
+1986,340.4,210.6,52.9,76.9,11.3,152.7,45.6,35.0,95.9,233.3,280.8,171.4,39.6,69.8,1.0,123.6,33.6,28.5,94.1,185.7,30.1,39.2,13.3,7.1,250.7,59.6,10.2,29.0,12.0,6.5,1.8,47.6,26.1,0.8,0.3,0.1,18.8,13.1,0.4,1.1
+1987,367.7,226.5,55.9,85.3,11.1,165.9,48.3,39.8,102.5,254.1,303.7,184.9,41.6,77.2,1.1,134.3,35.3,32.4,100.6,202.0,34.4,41.7,14.3,8.1,269.3,64.0,10.1,31.6,13.0,7.5,1.9,52.0,27.5,0.9,0.3,0.1,20.5,14.3,0.5,1.2
+1988,394.6,241.5,58.9,94.2,11.1,178.5,51.0,45.4,108.6,274.9,325.6,197.2,43.6,84.9,1.1,144.2,37.1,36.7,106.6,218.0,38.8,44.3,15.3,9.4,286.8,69.0,10.0,34.2,13.9,8.7,2.0,56.9,29.1,0.9,0.3,0.1,22.4,15.7,0.5,1.2
+1989,423.8,256.9,62.0,104.9,11.4,190.7,53.8,52.5,115.4,297.0,349.5,209.7,45.8,94.0,1.1,154.0,38.9,42.3,113.2,235.2,44.0,47.1,16.2,10.9,305.6,74.2,10.3,36.7,14.9,10.2,2.2,61.8,30.6,0.9,0.3,0.1,24.2,17.5,0.6,1.3
+1990,453.0,270.7,65.5,116.8,11.8,200.7,56.9,60.4,123.3,318.0,374.3,221.5,48.4,104.4,1.2,162.3,41.2,48.7,121.0,252.2,48.8,49.2,17.1,12.4,325.6,78.7,10.6,38.4,15.7,11.7,2.3,65.8,31.6,0.9,0.3,0.1,25.5,19.5,0.6,1.3
+1991,478.9,281.1,68.8,129.0,12.1,207.4,59.8,68.5,131.0,335.8,396.9,230.8,51.1,115.0,1.2,168.2,43.5,55.4,128.6,267.1,52.4,50.3,17.7,14.0,344.5,82.0,10.8,39.3,16.3,13.2,2.4,68.8,32.1,1.0,0.3,0.1,26.1,21.7,0.7,1.4
+1992,503.1,290.8,71.3,140.9,12.1,214.0,62.1,76.5,138.4,352.5,417.9,239.6,53.3,125.1,1.3,173.7,45.4,61.6,135.9,280.7,55.5,51.3,18.1,15.8,362.4,85.1,10.8,40.2,16.7,14.9,2.5,71.8,32.5,1.0,0.3,0.2,26.5,23.9,0.7,1.5
+1993,531.3,305.3,73.7,152.3,12.3,225.0,64.1,84.3,145.5,373.5,442.8,252.6,55.2,135.0,1.4,183.5,47.0,68.0,142.9,298.5,58.9,52.8,18.5,17.3,383.9,88.6,11.0,41.5,17.1,16.3,2.6,75.0,33.3,1.1,0.3,0.2,27.1,25.9,0.7,1.6
+1994,565.3,325.8,76.2,163.3,12.9,241.4,66.3,91.6,153.2,399.2,472.8,270.8,57.2,144.8,1.5,198.0,48.7,74.2,150.3,321.0,62.9,55.0,19.0,18.5,409.9,92.5,11.3,43.3,17.6,17.3,2.9,78.3,34.8,1.1,0.3,0.2,28.1,27.3,0.7,1.7
+1995,605.4,351.2,79.1,175.1,13.7,261.2,68.7,98.0,163.8,427.9,508.4,293.4,59.5,155.5,1.8,215.8,50.6,79.7,160.5,346.1,66.6,57.8,19.5,19.7,441.8,97.0,11.9,45.4,18.1,18.3,3.3,81.8,36.6,1.2,0.4,0.3,29.3,28.6,0.7,1.8
+1996,651.8,379.5,82.5,189.9,14.6,282.9,71.5,105.3,177.7,459.6,550.0,318.8,62.3,169.0,2.1,235.3,52.8,85.9,173.9,374.0,70.6,60.7,20.2,21.0,479.4,101.8,12.5,47.5,18.7,19.4,3.8,85.6,38.4,1.2,0.4,0.3,30.8,30.0,0.7,1.9
+1997,705.9,409.5,86.5,209.9,15.7,306.2,74.9,115.9,193.2,497.0,597.9,345.4,65.6,187.0,2.4,256.3,55.5,94.8,188.8,406.6,75.2,64.1,21.0,23.0,522.7,108.0,13.2,49.9,19.4,21.1,4.4,90.4,40.6,1.3,0.4,0.3,32.7,32.0,0.7,2.0
+1998,767.9,442.5,91.2,234.2,16.9,332.7,79.1,130.4,208.9,542.2,651.2,373.9,69.2,208.1,2.8,279.3,58.7,106.7,203.7,444.7,82.3,68.6,22.0,26.1,568.9,116.7,14.1,53.3,20.4,23.7,5.2,97.5,43.0,1.3,0.4,0.4,35.8,35.0,0.8,2.1
+1999,836.2,477.5,96.0,262.6,17.5,362.4,83.4,150.1,222.8,595.9,709.0,403.7,72.9,232.4,3.1,304.5,61.9,123.0,216.4,489.4,92.3,73.9,23.1,30.2,616.6,127.2,14.4,57.9,21.5,27.2,6.3,106.5,45.2,1.4,0.4,0.4,40.4,38.6,0.9,2.2
+2000,909.7,512.9,101.2,295.6,17.8,393.8,88.1,174.5,235.6,656.3,770.8,433.3,76.8,260.6,3.4,330.7,65.3,143.4,227.9,539.4,101.8,79.6,24.4,35.0,668.9,139.0,14.3,63.1,22.7,31.0,7.7,116.9,47.0,1.5,0.5,0.4,46.4,42.3,0.9,2.4
+2001,971.3,539.2,107.3,324.8,18.1,417.0,93.5,195.1,247.6,705.6,821.1,454.3,81.5,285.4,3.8,349.0,69.5,160.6,238.2,579.1,108.6,84.9,25.8,39.4,712.6,150.1,14.3,68.0,24.0,34.5,9.3,126.5,47.9,1.6,0.5,0.5,52.7,46.0,1.0,2.6
+2002,1010.1,553.0,112.5,344.6,18.6,429.0,98.3,210.3,253.8,737.7,849.6,463.2,85.3,301.1,4.3,356.6,73.0,172.7,242.9,602.4,114.4,89.8,27.1,43.5,735.3,160.4,14.3,72.4,25.3,37.6,10.8,135.3,48.2,1.7,0.6,0.5,58.5,50.0,1.1,2.7
+2003,1039.9,563.0,117.1,359.8,19.3,438.2,102.8,224.8,254.9,765.7,869.3,468.2,88.7,312.4,4.9,361.4,76.2,184.0,242.9,621.5,120.7,94.8,28.5,47.3,748.6,170.6,14.4,76.8,26.6,40.8,12.0,144.2,48.4,1.8,0.6,0.5,63.9,54.3,1.2,2.8
+2004,1074.2,576.3,122.3,375.6,20.3,450.6,107.7,239.4,256.2,797.7,893.4,476.1,92.4,324.8,5.5,369.0,79.8,195.6,243.5,644.4,126.8,100.2,29.8,50.8,766.6,180.8,14.7,81.6,27.9,43.8,12.8,153.3,48.9,1.8,0.6,0.4,69.3,58.5,1.3,2.9
+2005,1118.4,596.0,128.6,393.9,21.3,468.3,113.8,253.7,261.3,835.9,926.4,489.4,97.3,339.6,6.1,381.1,84.5,206.9,247.6,672.6,131.6,106.5,31.3,54.2,794.8,192.1,15.2,87.2,29.3,46.8,13.6,163.3,49.6,1.9,0.7,0.4,75.6,62.5,1.3,3.0
+2006,1175.4,623.6,137.3,414.5,22.2,492.9,122.3,267.6,270.5,882.7,970.9,509.8,104.1,357.0,6.7,399.1,91.2,218.0,255.9,708.3,135.4,113.8,33.2,57.6,835.5,204.5,15.5,93.7,31.1,49.6,14.6,174.4,50.5,2.0,0.7,0.4,82.9,66.6,1.4,3.1
+2007,1240.3,654.8,148.4,437.1,23.0,519.6,132.9,281.4,283.4,933.9,1022.1,533.2,112.8,376.0,7.2,418.7,99.4,228.9,267.9,747.1,141.1,121.6,35.6,61.0,881.0,218.2,15.8,100.9,33.4,52.5,15.6,186.8,51.3,2.2,0.8,0.4,91.0,71.1,1.5,3.3
+2008,1299.0,676.7,161.3,461.0,24.1,536.0,145.1,294.7,299.1,975.8,1067.4,548.3,122.8,396.3,7.7,429.1,108.9,239.2,282.4,777.3,146.1,128.4,38.4,64.8,921.3,231.6,16.4,106.8,36.2,55.6,16.7,198.6,51.9,2.3,0.8,0.4,98.5,76.0,1.7,3.6
+2009,1328.1,675.2,172.2,480.7,25.2,532.0,155.5,307.0,308.4,994.4,1087.4,543.7,131.2,412.5,8.3,422.7,116.9,248.5,291.0,788.1,146.8,131.6,41.0,68.2,940.5,240.7,17.0,109.3,38.6,58.5,17.4,206.4,51.8,2.5,0.9,0.5,103.0,80.3,1.7,3.9
+2010,1342.4,670.2,179.4,492.8,26.4,526.4,162.4,315.4,311.8,1004.2,1095.8,536.8,136.7,422.3,8.8,415.9,122.1,254.8,294.1,792.8,145.5,133.4,42.7,70.5,950.3,246.6,17.6,110.5,40.2,60.5,17.7,211.3,51.7,2.6,1.0,0.5,105.7,83.4,1.7,4.1
+2011,1375.4,681.8,186.5,507.1,28.0,535.1,169.1,323.6,319.5,1027.9,1121.3,544.6,142.3,434.4,9.5,421.8,127.5,261.3,301.2,810.7,145.7,137.2,44.1,72.7,975.6,254.0,18.5,113.3,41.6,62.3,18.3,217.2,52.2,2.7,1.1,0.5,109.2,86.6,1.7,4.4
+2012,1428.6,705.6,195.4,527.6,30.6,553.4,177.5,336.2,330.9,1067.1,1164.2,562.7,149.7,451.8,10.5,436.1,134.4,271.3,311.8,841.8,150.0,142.9,45.8,75.8,1014.2,264.5,20.1,117.3,43.1,64.9,19.1,225.3,53.6,2.9,1.2,0.5,114.1,90.4,1.7,4.7
+2013,1492.6,736.8,205.5,550.3,34.0,577.0,186.9,350.0,344.7,1113.9,1216.4,587.0,157.9,471.4,11.9,455.2,142.1,282.5,324.7,879.8,157.4,149.7,47.6,78.9,1059.0,276.2,22.1,121.8,44.8,67.5,20.0,234.1,55.9,3.1,1.4,0.5,120.0,93.7,1.8,4.9
+2014,1562.5,770.4,216.2,576.0,36.9,601.9,196.7,365.3,361.6,1164.0,1274.3,613.8,166.7,493.8,13.0,475.5,150.2,295.2,340.5,920.8,165.9,156.6,49.5,82.1,1108.5,288.2,23.9,126.5,46.6,70.1,21.1,243.2,58.1,3.2,1.5,0.5,126.2,96.8,1.8,5.2
+```
+       </div>
+
+       </div>
+    </div>
+</body>
+</html>
+
+
+

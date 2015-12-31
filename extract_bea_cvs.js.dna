@@ -23,19 +23,24 @@ var fs= require('fs');
 
 var file = fs.readFileSync(process.argv[2],'utf8');
 var lines = file.split('\r\n');
+
+.<h1>@{lines[0].replace(/"/mg,'')} <a href="https://bea.gov">bea.gov</a></h1>
+
 var data = [];
 var start = false;
+var prefix="";
 for(var i = 0; i<lines.length; i++) {
   var line = lines[i];
   if(start) {
+    var array = line.split('"');
     if(line.match(/^"\s*"/) != null){
+    prefix = array[3].trim().replace(/ /mg,"_").replace("-","_").replace(/[\(\):\'\",]/mg,"") + "_";
       continue;
     }
-    var array = line.split('"');
     if(isNaN(array[1])){
       continue;
     }
-    var name = array[3].trim().replace(/ /mg,"_").replace("-","_").replace(/[\(\):\'\",]/mg,"");
+    var name = prefix + array[3].trim().replace(/ /mg,"_").replace("-","_").replace(/[\(\):\'\",]/mg,"");
     array.shift();
     array.shift();
     array.shift();
@@ -67,7 +72,7 @@ keys.shift();
 keys.forEach(function(key) {
 
 .       <div class="markdown"> 
-.# [@{key}](#@{key})
+.# [@{key.replace(/\_/mg," ")}](#@{key})
 .       </div>
 .       <div class="multi_chart" id="@{key}"></div>
 .       <form style="margin-left:40%">
