@@ -3,9 +3,9 @@ function computation(data) {
   ndata.year=data.year;
 
   if("GV" in data && "Co" in data && "De" in data && "Ca" in data) { 
-    ndata.Rate_of_Profit = (data.GV - data.Co - data.De)/ data.Ca * 100;
+    ndata.Rate_of_Profit_US = (data.GV - data.Co - data.De)/ data.Ca * 100;
   } else {
-    ndata.Rate_of_Profit = -1000000000;
+    ndata.US_Rate_of_Profit_US = -1000000000;
   }
   return ndata;
 }

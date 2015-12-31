@@ -56,9 +56,9 @@ function computation(data) {
   ndata.year=data.year;
 
   if("GV" in data && "Co" in data && "De" in data && "Ca" in data) { 
-    ndata.Rate_of_Profit = (data.GV - data.Co - data.De)/ data.Ca * 100;
+    ndata.Rate_of_Profit_US = (data.GV - data.Co - data.De)/ data.Ca * 100;
   } else {
-    ndata.Rate_of_Profit = -1000000000;
+    ndata.US_Rate_of_Profit_US = -1000000000;
   }
   return ndata;
 }
@@ -72,7 +72,7 @@ Multi_chart([["data/bea_usa/Gross_Value_Added_of_Domestic_Corporate_Business_in_
 A place of discussion about the economy based on statistical data. Even though we have an appreciation of Marx's work, we are
 open to good arguments by any school of thought. Humility and doubtfulness after all is the only path to knowledge.
 
-To enable the community to inspect the work of others, we seperate the data from their analysis and all formulas are explicit.
+To enable the community to inspect the work of others, we separate the data from their analysis and all formulas are explicit.
 
        </div>
 

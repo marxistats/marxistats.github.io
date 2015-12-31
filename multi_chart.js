@@ -97,7 +97,7 @@ function Multi_chart(data_locations,computation,root_location,y_name,min_year,ma
        .attr("transform", function(d) { return "translate(" + x(d.value.year) + "," + y(d.value.y_value) + ")"; })
        .attr("x", 3)
        .attr("dy", ".35em")
-       .text(function(d) { return d.name; });
+       .text(function(d) { return d.name.replace(/\_/mg," "); });
   }
   
   var d_i = 0;
