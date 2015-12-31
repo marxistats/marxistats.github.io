@@ -1,7 +1,19 @@
 function computation(data) {
   ndata = {};
-  ndata.RoPM = data.RoPM/2;
-  ndata.year=data.year; 
+  ndata.year=data.year;
+
+  if("GV" in data && "Co" in data && "De" in data && "Ca" in data) { 
+    ndata.Rate_of_Profit = (data.GV - data.Co - data.De)/ data.Ca * 100;
+  } else {
+    ndata.Rate_of_Profit = -1000000000;
+  }
   return ndata;
 }
-multi_chart([["data/bea/Gross_Value_Added_of_Domestic_Corporate_Business_in_Current_Dollars_and_Gross_Value_Added_of_Nonfinancial_Domestic_Corporate_Business_in_Current_and_Chained_Dollars/data.csv",["Gross_value_added_of_corporate_business_1","Compensation_of_employees"]],["data/bea/Historical-Cost_Depreciation_of_Private_Nonresidential_Fixed_Assets_by_Industry_Group_and_Legal_Form_of_Organization/data.csv",[]]],computation,"#front_page","%");
+
+
+var front_page_chart = new
+Multi_chart([["data/bea_usa/Gross_Value_Added_of_Domestic_Corporate_Business_in_Current_Dollars_and_Gross_Value_Added_of_Nonfinancial_Domestic_Corporate_Business_in_Current_and_Chained_Dollars/data.csv",[["Gross_value_added_of_corporate_business_1","GV"],["Compensation_of_employees","Co"]]],["data/bea_usa/Historical-Cost_Depreciation_of_Private_Nonresidential_Fixed_Assets_by_Industry_Group_and_Legal_Form_of_Organization/data.csv",[["By_legal_form_of_organization_Corporate","De"]]],["data/bea_usa/Historical-Cost_Net_Stock_of_Private_Fixed_Assets_by_Industry_Group_and_Legal_Form_of_Organization/data.csv",[["By_legal_form_of_organization_Corporate","Ca"]]]],computation,"#front_page","%",1940,2014);
+
+setTimeout(function(){
+  front_page_chart.draw(1940,2014);
+},10000);

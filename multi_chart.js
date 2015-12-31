@@ -1,4 +1,4 @@
-function Multi_chart(data_locations,computation,root_location,y_name) {
+function Multi_chart(data_locations,computation,root_location,y_name,min_year,max_year) {
   this.draw = draw; 
   this.data;
   var self = this;
@@ -102,7 +102,7 @@ function Multi_chart(data_locations,computation,root_location,y_name) {
   
   var d_i = 0;
   var tdata = [];
-  function recursive(){
+  function recursive(tdata){
     d3.csv(data_locations[d_i][0], function(error, ldata) {
       if (error) throw error;
         ldata.forEach(function(each){
@@ -110,7 +110,7 @@ function Multi_chart(data_locations,computation,root_location,y_name) {
         });
         d_i++;
       if(d_i < data_locations.length){
-        recursive();
+        recursive(tdata);
       } else {
         self.data = [];
         tdata.forEach(function(each){
@@ -120,7 +120,7 @@ function Multi_chart(data_locations,computation,root_location,y_name) {
         self.min_year = self.data[0].year;
         self.max_year = self.data[self.data.length-1].year;
         $(document).ready(function() {
-          self.draw();
+          self.draw(min_year,max_year);
           if(window.onresize == null) {
             window.onresize = function() {self.draw()};
           } else {
@@ -149,8 +149,12 @@ function Multi_chart(data_locations,computation,root_location,y_name) {
     }
     var citem = data[i];
     keys.forEach(function(key){
-      citem[key] = item[key];
+      if(Array.isArray(key)) {
+        citem[key[1]] = item[key[0]];
+      } else {
+        citem[key] = item[key];
+      }
     });
   }
-  recursive();
+  recursive(tdata);
 }
