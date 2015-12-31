@@ -25,6 +25,27 @@
 
        <div class='multi_chart' id='front_page'>
        </div>
+
+       <form style="margin-left:40%">
+          minimum year:
+         <input type="number" id="front_page_min" name="min_year" value="1940" min="1940" max="2014">
+          maximum year:
+         <input type="number" id="front_page_max" name="max_year" value="2014" min="1940" max="2014">
+       </form>
+
+      <script>
+      $("#front_page_min").change(function(){
+        var min = $("#front_page_min").val();
+        var max = $("#front_page_max").val();
+        front_page_chart.draw(min,max);
+      });
+      $("#front_page_max").change(function(){
+        var min = $("#front_page_min").val();
+        var max = $("#front_page_max").val();
+        front_page_chart.draw(min,max);
+      });
+      </script>
+
        <div class="markdown">
 
 ```javascript

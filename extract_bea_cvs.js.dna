@@ -93,7 +93,6 @@ keys.forEach(function(key) {
 .  var min = $("#@{key}_min").val();
 .  var max = $("#@{key}_max").val();
 .  @{key}_chart.draw(min,max);
-.  @{key}_chart.draw(min,max);
 .});
 .</script>
 
